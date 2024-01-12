@@ -11,9 +11,9 @@ app.use(express.json());
 app.use(tracksRoutes)
 
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect("mongodb+srv://dede:mXYfQt1xNhJmrwKX@mern-deploy-render.ugrdoha.mongodb.net/?retryWrites=true&w=majority")
     .then(()=>{
-        app.listen(process.env.PORT, () => console.log(`Connected to DB and Listening on port ${process.env.PORT}`));
+        app.listen(4000);
     })
     .catch((error)=>{
         console.log(error)
