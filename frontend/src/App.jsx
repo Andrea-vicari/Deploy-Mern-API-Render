@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 function App() {
   const makeAPICall = async () => {
     try {
-      const response = await fetch('https://deploy-mern-api-render.vercel.app/api/tracks', {mode:'cors'});
+      const response = await fetch('https://deploy-mern-api-render.vercel.app/', {mode:'cors'});
       const data = await response.json();
       console.log({ data })
     }
