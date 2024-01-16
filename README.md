@@ -1,4 +1,4 @@
-# EXPRESS SERVER DEPLOYED ON RENDER.COM
+# M.E.R.N DEPLOYED ON RENDER.COM
 Installation on MERN on render.com
 
 ### RECAP at 16/01
