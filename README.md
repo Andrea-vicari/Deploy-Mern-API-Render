@@ -2,20 +2,9 @@
 Installation of MERN application live on vercel, both Back and FrontEnd
 
 ## 💡 RECAP at 16/01 h.18:11 after GOOD deployment
-
-
-[Server Side:](https://deploy-mern-api-render.vercel.app/)
-[FrontEnd Side](https://deploy-mern-api-render-frontend.vercel.app/)
-
-## 💡 RECAP at 16/01 before Run Build and Deploy (h.14:30)
-**LOCALHOST**
-* Fetch correctly the Datas from the MongoDB in the server
-* Test The CRUD on localhost with POSTMAN: OK
-* SERVER(Localhost:4000) => CLIENT(Localhost:5173) Works fine
-
-## 🤔 TO DO
-* 🧐 Check WELL the BUILD command with Create React App
-* 😤 Try to deploy on Render and/or Vercel
+SEE LIVE:
+* [Server Side:] (https://deploy-mern-api-render.vercel.app/)/
+* [FrontEnd Side] (https://deploy-mern-api-render-frontend.vercel.app/)
 
 ===================
 #### BackEnd folder
