@@ -1,25 +1,31 @@
 # M.E.R.N DEPLOYED ON RENDER.COM
 Installation on MERN on render.com
 
-### RECAP at 16/01
+## 💡 RECAP at 16/01
+**LOCALHOST**
+* Fetch correctly the Datas from the MongoDB in the server
+* Test The CRUD on localhost with POSTMAN: OK
+* SERVER(Localhost:4000) => CLIENT(Localhost:4000) Works fine
+  
+## 🤔 TO DO 
+* 🧐 Check WELL the BUILD command with Create React App
+* 😤 Try to deploy on Render and/or Vercel
+
 ===================
-#### BackEnd folder
+#### BackEnd folder 
 * Set up server.js
 * Fixed (localhost) CORS error
 * MONGO_DB_CONNECT_URI and PORT (4000)
 * Ok the end points at /api/tracks
 * Ok SCHEMAS and CONTROLLERS
 * Connection with MongoDB OK
-* Test The CRUD on localhost with POSTMAN: OK
 
 #### Front-end folder
 * Installed React with Create React App package
 * Set up a makeAPICall() function to fetch from server
-* SERVER(Localhost:4000) => CLIENT(Localhost:4000) Works fine
 
-##  TO DO
-* Check WELL the BUILD command with Create React App
-* Try to deploy on Render and/or Vercel
+
+
 
 ### Technologies
 * Node.js
