@@ -9,7 +9,7 @@ app.use(express.json());
 // Important to avoid CORS block
 app.use(cors(
     {
-        origin: ["http://localhost:5173"],
+        origin: ["https://deploy-mern-api-render.vercel.app/"],
         methods: ["POST", "GET"],
         credentials: true
     }
