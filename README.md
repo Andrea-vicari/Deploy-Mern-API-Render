@@ -5,14 +5,14 @@ Installation on MERN on render.com
 **LOCALHOST**
 * Fetch correctly the Datas from the MongoDB in the server
 * Test The CRUD on localhost with POSTMAN: OK
-* SERVER(Localhost:4000) => CLIENT(Localhost:4000) Works fine
-  
-## 🤔 TO DO 
+* SERVER(Localhost:4000) => CLIENT(Localhost:5173) Works fine
+
+## 🤔 TO DO
 * 🧐 Check WELL the BUILD command with Create React App
 * 😤 Try to deploy on Render and/or Vercel
 
 ===================
-#### BackEnd folder 
+#### BackEnd folder
 * Set up server.js
 * Fixed (localhost) CORS error
 * MONGO_DB_CONNECT_URI and PORT (4000)
@@ -21,7 +21,7 @@ Installation on MERN on render.com
 * Connection with MongoDB OK
 
 #### Front-end folder
-* Installed React with Create React App package
+* Installed React with Vite package
 * Set up a makeAPICall() function to fetch from server
 
 
