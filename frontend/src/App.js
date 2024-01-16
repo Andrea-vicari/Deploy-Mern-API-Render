@@ -1,8 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useEffect} from 'react';
 
 const App = () =>{
+  const makeAPICall = async () => {
+    try {
+      const response = await fetch('http://localhost:4000/api/tracks/', {mode:'cors'});
+      const data = await response.json();
+      console.log({ data })
+    }
+    catch (e) {
+      console.log(e)
+    }
+  }
+  useEffect(() => {
+    makeAPICall();
+  }, [])
+
   return (
       <div className="App">
         <div className="App-header">
