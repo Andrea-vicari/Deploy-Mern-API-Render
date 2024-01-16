@@ -1,6 +1,5 @@
-# EXPRESS SERVER DEPLOYED ON VERCEL
-Express server deployed on Vercel
-Deployed only the Backend folder
+# EXPRESS SERVER DEPLOYED ON RENDER.COM
+Installation on MERN on render.com
 
 ### RECAP at 16/01
 #### BAckEnd folder
@@ -10,10 +9,11 @@ Deployed only the Backend folder
 * Connection with MongoDB OK
 * Test The CRUD on localhost with POSTMAN: OK
 
-* Now install React with C.R.A in frontend folder
+* Now install React  => !! with C.R.A in frontend folder !!
 
 ### Technologies
 * Node.js
 * Express
 * Mongoose
 * MongoDB
+* React
