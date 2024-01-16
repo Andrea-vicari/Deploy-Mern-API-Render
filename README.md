@@ -1,5 +1,8 @@
-# M.E.R.N DEPLOYED ON RENDER.COM
-Installation on MERN on render.com
+# M.E.R.N DEPLOYED ON VERCEL
+Installation of MERN application live on vercel, both Back and FrontEnd
+
+## 💡 RECAP at 16/01 before Run Build and Deploy (h.14:30)
+**LOCALHOST**
 
 ## 💡 RECAP at 16/01 before Run Build and Deploy (h.14:30)
 **LOCALHOST**
