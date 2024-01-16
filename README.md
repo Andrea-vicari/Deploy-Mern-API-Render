@@ -18,6 +18,7 @@ Installation on MERN on render.com
 * SERVER(Localhost:4000) => CLIENT(Localhost:4000) Works fine
 
 ##  TO DO
+* Check WELL the BUILD command with Create React App
 * Try to deploy on Render and/or Vercel
 
 ### Technologies
