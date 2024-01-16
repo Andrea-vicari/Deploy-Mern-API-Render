@@ -6,6 +6,7 @@ const app = express();
 
 app.use(express.json());
 
+// Important to avoid CORS block
 app.use(cors(
     {
         origin: ["http://localhost:3000"],
