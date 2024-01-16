@@ -1,7 +1,7 @@
 # M.E.R.N DEPLOYED ON RENDER.COM
 Installation on MERN on render.com
 
-## 💡 RECAP at 16/01
+## 💡 RECAP at 16/01 before Run Build and Deploy (h.14:30)
 **LOCALHOST**
 * Fetch correctly the Datas from the MongoDB in the server
 * Test The CRUD on localhost with POSTMAN: OK
