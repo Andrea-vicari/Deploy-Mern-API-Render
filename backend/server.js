@@ -2,6 +2,8 @@ const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose')
 require ('dotenv').config();
+const app = express();
+app.use(express.json());
 
 mongoose.connect(process.env.MONGO_DB_CONNECT_URI)
     .then(()=>{
@@ -13,17 +15,7 @@ mongoose.connect(process.env.MONGO_DB_CONNECT_URI)
 
 const tracksRoutes = require('./routes/tracks');
 
-
-const app = express();
-app.use(express.json());
 app.use(tracksRoutes)
-
-
-app.use(express.json())
-
-
-
-
 
 app.use('/api/tracks', tracksRoutes)
 
