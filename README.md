@@ -1,9 +1,12 @@
-# M.E.R.N DEPLOYED ON VERCEL
+# DRUMPAD deployed on VERCEL
 Installation of MERN application live on vercel, both Back and FrontEnd
 
-## 💡 TODO at 17/01 h.15:30 after GOOD deployment
-After import packages and the Components grom the old DRUM_MACHINE
-* Try to change with POSTMAN the mp3 url
+
+## 💡 TODO
+* Try to avoid the duration function
+* Re-create the bg-color effect
+* Delete the Bootstrap btn in order to correctly work
+* Go on, now it plays MP3
 
 ===================
 #### BackEnd folder
