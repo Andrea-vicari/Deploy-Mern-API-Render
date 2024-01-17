@@ -65,7 +65,7 @@ function SingleKey (){
         console.log(trackUrl)
        // mp3_toplay.loop = true;
         mp3_toplay.play();
-        var MP3_duration = document.getElementById(trackID).duration;
+        var MP3_duration = document.getElementById(trackName).duration;
         console.log(MP3_duration);
 
         startConter(Math.floor(MP3_duration),i)
