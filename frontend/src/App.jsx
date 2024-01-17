@@ -1,45 +1,29 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Header from "./Components/Common/Header"
+import Footer from "./Components/Common/Footer"
+import Home from './Components/Home';
+import Update from './Components/Update';
+import DashBoard from './Components/DashBoard';
+import "../src/index.css";
 
 function App() {
-  const makeAPICall = async () => {
-    try {
-      const response = await fetch('https://deploy-mern-api-render.vercel.app/', {mode:'cors'});
-      const data = await response.json();
-      console.log({ data })
-    }
-    catch (e) {
-      console.log(e)
-    }
-  }
-  useEffect(() => {
-    makeAPICall();
-  }, [])
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
+    <React.Fragment>
+      <Header />
 
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+          <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/DashBoard" element={<DashBoard />} />
+              <Route path='/update/:id' element={<Update />}></Route>
+            </Routes>
+      <Footer />
+    </React.Fragment>
   )
 }
 
-export {App};
+export default App

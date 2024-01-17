@@ -1,7 +1,10 @@
 const mongoose = require('mongoose')
 
 const tracksSchema = new mongoose.Schema({
-
+        keyNumber:{
+        type: Number,
+        required: false
+        },
         trackName:{
         type: String,
         required: true
