@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGO_DB_CONNECT_URI)
 
 const tracksRoutes = require('./routes/tracks');
 
-app.use(tracksRoutes)
+// app.use(tracksRoutes)
 
 app.use('/api/tracks', tracksRoutes)
 
