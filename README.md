@@ -1,10 +1,9 @@
 # M.E.R.N DEPLOYED ON VERCEL
 Installation of MERN application live on vercel, both Back and FrontEnd
 
-## 💡 RECAP at 16/01 h.18:11 after GOOD deployment
-SEE LIVE:
-* [Server Side:] (https://deploy-mern-api-render.vercel.app/)/
-* [FrontEnd Side] (https://deploy-mern-api-render-frontend.vercel.app/)
+## 💡 TODO at 17/01 h.15:30 after GOOD deployment
+After import packages and the Components grom the old DRUM_MACHINE
+* Try to change with POSTMAN the mp3 url
 
 ===================
 #### BackEnd folder
