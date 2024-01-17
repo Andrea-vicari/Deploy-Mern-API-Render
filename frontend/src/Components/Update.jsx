@@ -1,40 +1,12 @@
-import axios from 'axios';
 import React from 'react'
-import { useEffect , useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
 
 
 function Update (){
 
-    const {id} = useParams();
 
-    const [inputData, setInputData] = useState({
-        id: id,
-        trackURL: '',
-
-    })
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        axios.get('http://localhost:3000/tracks/'+id)
-        .then(res => setInputData(res.data))
-        .then(console.log(inputData))
-        .catch(err => console.log(err))
-    }, [])
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        axios.put('http://localhost:3000/tracks/'+id , inputData)
-        .then(res => {
-            alert("Data Updated Successfully!")
-            navigate('/')
-        })
-    }
-
-
-    return(
+   return(
         <main className="container">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit="">
 
                     <h1 className="h3 mb-3 text-white">Edit: {id}</h1>
                     <p className="text-white">Choose the Track for this key</p>

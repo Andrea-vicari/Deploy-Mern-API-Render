@@ -3,7 +3,6 @@ import mp3List from "./mp3.json";
 import { useState, useEffect } from "react";
 import keyList from "./keyList.json";
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import axios from 'axios'
 
 function DashBoard (){
 
@@ -12,13 +11,20 @@ function DashBoard (){
   const [data, setData] = useState([])
     const navigate = useNavigate();
 
-    useEffect(()=> {
-        axios.get('http://localhost:3000/tracks')
-        .then(res => setData(res.data))
-        .catch(err => console.log(err))
+    const makeAPICall = async () => {
+      try {
+        const response = await fetch('https://deploy-mern-api-render.vercel.app/', {mode:'cors'});
+        const data = await response.json();
+        console.log({ data })
+      }
+      catch (e) {
+        console.log(e)
+      }
+    }
+    useEffect(() => {
+      makeAPICall();
     }, [])
 
-    console.log(data)
 
     return(
       <div className="container mx-auto px-3 py-3 bg-black">

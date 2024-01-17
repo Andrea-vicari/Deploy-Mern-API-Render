@@ -1,19 +1,25 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from 'axios'
 
 function SingleKey (){
 
     const [data, setData] = useState([])
 
 
-    useEffect(()=> {
-        axios.get('http://localhost:3000/tracks')
-        .then(res => setData(res.data))
-        .catch(err => console.log(err))
-    }, [])
+    const makeAPICall = async () => {
+        try {
+          const response = await fetch('https://deploy-mern-api-render.vercel.app/', {mode:'cors'});
+          const data = await response.json();
+          console.log({ data })
+        }
+        catch (e) {
+          console.log(e)
+        }
+      }
+      useEffect(() => {
+        makeAPICall();
+      }, [])
 
-    console.log(data)
 
 
 
