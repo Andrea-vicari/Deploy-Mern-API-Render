@@ -10,6 +10,7 @@ function SingleKey (){
         try {
           const response = await fetch('https://deploy-mern-api-render.vercel.app/', {mode:'cors'});
           const data = await response.json();
+          setData(data)
           console.log({ data })
         }
         catch (e) {
