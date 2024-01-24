@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 function SingleKey (){
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
 
 
     const makeAPICall = async () => {
@@ -22,32 +22,13 @@ function SingleKey (){
         makeAPICall();
       }, [])
 
+    function addColor (i){
+
+      document.getElementById(i+300).classList.add("d-none");
+      document.getElementById(i+200).classList.remove("playing");
 
 
-
-    function startConter(endTime,i){
-
-        var obj = 0;
-        var current = obj;
-
-        setInterval(function(){
-           current++;
-           obj = current;
-
-
-            if(obj == endTime){
-                console.log(obj)
-                document.getElementById(i+300).classList.add("d-none");
-                document.getElementById(i+200).classList.remove("playing");
-               // alert('STOP COUNT !!!')
-               return ()=>{
-                clearInterval(setInterval);
-            }
-            }
-
-        },1000);
-
-      }
+    }
 
 
     const playSound = (i, trackName, trackID, trackUrl) => {
@@ -63,15 +44,14 @@ function SingleKey (){
         console.log(mp3_toplay)
 
         console.log(trackUrl)
-       // mp3_toplay.loop = true;
+
         mp3_toplay.play();
-        var MP3_duration = document.getElementById(trackName).duration;
-        console.log(MP3_duration);
+
         mp3_toplay.onended = function (){
-          alert("is ended")
+          addColor(i)
         }
 
-        startConter(Math.floor(MP3_duration),i)
+
 
     }
 
@@ -79,7 +59,7 @@ function SingleKey (){
     return(
         data.map((d, i) => (
             <div key={d.id} id={100+i}>
-                <button id={200+i} className="btn btn-sq-responsive" onClick={() => playSound(i, d.trackName, d.id, d.trackUrl)}>
+                <button id={200+i} className="btn acid-green btn-sq-responsive" onClick={() => playSound(i, d.trackName, d.id, d.trackUrl)}>
                 <span id={i+300} className="spinner-border d-none spinner-border-sm" aria-hidden="true"></span>
                 <audio className="clip" id={d.trackName} src={d.trackUrl}></audio>
                 </button>

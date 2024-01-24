@@ -1,6 +1,6 @@
 
 .acid-green{
-  background-color: greenyellow;
+  background-color: greenyellow !important;
 }
 
 .text-blue-react{
@@ -12,7 +12,7 @@
 }
 
 .playing{
-background-color: greenyellow !important;
+background-color: blueviolet !important;
 }
 
 /* Style for Extra Large Screen */

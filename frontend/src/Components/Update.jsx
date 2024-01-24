@@ -1,12 +1,40 @@
+import axios from 'axios';
 import React from 'react'
+import { useEffect , useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 function Update (){
 
+    const {id} = useParams();
 
-   return(
+    const [inputData, setInputData] = useState({
+        id: id,
+        trackURL: '',
+
+    })
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        axios.get('https://deploy-mern-api-render.vercel.app/api/tracks/')
+        .then(res => setInputData(res.data))
+        .then(console.log(inputData))
+        .catch(err => console.log(err))
+    }, [])
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        axios.put('https://deploy-mern-api-render.vercel.app/api/tracks/'+id , inputData)
+        .then(res => {
+            alert("Data Updated Successfully!")
+            navigate('/')
+        })
+    }
+
+
+    return(
         <main className="container">
-                <form onSubmit="">
+                <form onSubmit={handleSubmit}>
 
                     <h1 className="h3 mb-3 text-white">Edit: {id}</h1>
                     <p className="text-white">Choose the Track for this key</p>
