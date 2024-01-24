@@ -67,7 +67,9 @@ function SingleKey (){
         mp3_toplay.play();
         var MP3_duration = document.getElementById(trackName).duration;
         console.log(MP3_duration);
-        console.log(mp3_toplay.onended)
+        mp3_toplay.onended = function (){
+          alert("is ended")
+        }
 
         startConter(Math.floor(MP3_duration),i)
 
