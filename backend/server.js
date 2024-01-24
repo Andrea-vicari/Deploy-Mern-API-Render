@@ -9,7 +9,7 @@ app.use(express.json());
 // !!! Important to avoid CORS block (!! Check the final slash / )
 app.use(cors(
     {
-        origin: ["http://localhost:4173"],
+        origin: ["http://localhost:5173"],
         methods: ["POST", "GET"],
         credentials: true
     }
