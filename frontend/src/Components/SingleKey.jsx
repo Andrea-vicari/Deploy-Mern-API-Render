@@ -9,7 +9,7 @@ function SingleKey (){
 
     const makeAPICall = async () => {
         try {
-          const response = await fetch('https://deploy-mern-api-render.vercel.app/', {mode:'cors'});
+          const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys/', {mode:'cors'});
           const data = await response.json();
           setData(data)
           console.log({ data })
@@ -36,11 +36,11 @@ function SingleKey (){
         document.getElementById(i+300).classList.remove("d-none");
         document.getElementById(i+200).classList.add("playing");
 
-        document.getElementById('MP3_display').innerHTML = `${trackName}`;
+      //  document.getElementById('MP3_display').innerHTML = `${trackName}`;
 
         console.log(i);
 
-        let mp3_toplay = document.getElementById(trackName);
+        let mp3_toplay = document.getElementById(trackUrl);
         console.log(mp3_toplay)
 
         console.log(trackUrl)
@@ -61,7 +61,7 @@ function SingleKey (){
             <div key={d.id} id={100+i}>
                 <button id={200+i} className="btn acid-green btn-sq-responsive" onClick={() => playSound(i, d.trackName, d.id, d.trackUrl)}>
                 <span id={i+300} className="spinner-border d-none spinner-border-sm" aria-hidden="true"></span>
-                <audio className="clip" id={d.trackName} src={d.trackUrl}></audio>
+                <audio className="clip" id={d.trackUrl} src={d.trackUrl}></audio>
                 </button>
             </div>
 
