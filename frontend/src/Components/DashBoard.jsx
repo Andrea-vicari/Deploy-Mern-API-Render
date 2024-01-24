@@ -9,12 +9,13 @@ function DashBoard (){
 
 
   const [data, setData] = useState([])
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
     const makeAPICall = async () => {
       try {
-        const response = await fetch('https://deploy-mern-api-render.vercel.app/', {mode:'cors'});
+        const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys', {mode:'cors'});
         const data = await response.json();
+        setData(data)
         console.log({ data })
       }
       catch (e) {
@@ -28,16 +29,16 @@ function DashBoard (){
 
     return(
       <div className="container mx-auto px-3 py-3 bg-black">
-          <h1 className="text-white text-center">Dashboard</h1>
-          <p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui temporibus, esse facilis labore quae offic</p>
+          <h3 className="text-white text-center">Dashboard</h3>
+          <p className="text-secondary text-center">Click Edit to change the Track</p>
           <div className="row mb-3 text-center">
-          {keyList.map((e)=>{
+          {data.map((e)=>{
                   return (
-                    <div className="col-4 mb-2" key={e.id}>
+                    <div className="col-4 mb-2" key={e.keyNumber}>
                     <div className="card">
-                        <h5 className="card-header">{e.id}</h5>
+                        <h5 className="card-header">KEY: {e.keyNumber}</h5>
                         <div className="card-body">
-                          <Link to={`/update/${e.id}`} className="btn btn-primary">Edit</Link>
+                          <Link to={`/update/${e.keyNumber}`} className="btn btn-primary">Edit</Link>
                         </div>
                       </div>
 

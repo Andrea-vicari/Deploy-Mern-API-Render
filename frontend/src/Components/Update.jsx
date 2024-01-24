@@ -6,6 +6,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function Update (){
 
+
+
     const {id} = useParams();
 
     const [inputData, setInputData] = useState({
