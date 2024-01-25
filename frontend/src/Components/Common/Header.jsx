@@ -32,13 +32,10 @@ function Header () {
                             </Link>
                             </li>
                             <li>
-                             <Link to="/DashBoard" >
+                             <Link to="/login" >
                             Dashboard
                             </Link>
                             </li>
-
-
-
                           <li>Pippo</li>
                           <li>Pluto</li>
                         </ul>
