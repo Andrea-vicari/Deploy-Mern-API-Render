@@ -36,7 +36,7 @@ function SingleKey (){
         document.getElementById(i+300).classList.remove("d-none");
         document.getElementById(i+200).classList.add("playing");
 
-      //  document.getElementById('MP3_display').innerHTML = `${trackName}`;
+       document.getElementById('MP3_display').innerHTML = `${trackName}`;
 
         console.log(i);
 
