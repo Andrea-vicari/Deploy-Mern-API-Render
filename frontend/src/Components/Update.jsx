@@ -58,11 +58,11 @@ function Update (){
             const json = await response.json();
 
             if(!response.ok){
-              setError()
+              alert("NOT OK")
             }
             if(response.ok){
-              setError(null)
-              (alert("OK"))
+
+              alert("OK")
             }
 
 
