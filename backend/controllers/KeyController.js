@@ -76,6 +76,7 @@ const updateKey = async (req, res)=> {
     if(!key){
         return res.status(400).json({error: "No Track found y"})
     }
+    console.log(req.body)
     res.status(200).json(key);
 
 }

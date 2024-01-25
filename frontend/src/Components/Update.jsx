@@ -66,7 +66,7 @@ function Update (){
             }
 
 
-            alert(nuovoURL);
+
       }
 
 
