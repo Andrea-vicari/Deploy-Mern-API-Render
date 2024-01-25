@@ -37,23 +37,26 @@ function Update (){
     const navigate = useNavigate();
 
      // Here the Crud operation
-      const [newURL, setnewURL] = useState("");
-      const [error, setError] = useState(null);
+
 
       const handleClick = async (nuovoURL)=>{
 
-            setnewURL(nuovoURL);
+
 
             const key = {nuovoURL};
+
+            console.log(nuovoURL)
 
             const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys/${id}`,{
 
               method : 'PATCH',
-              body: JSON.stringify(key),
+              body: key,
               headers:{
-                'Content-Type': 'application/json'
+                'Content-Type': 'text'
               }
             })
+
+            console.log(response)
 
             const json = await response.json();
 
