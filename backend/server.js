@@ -1,6 +1,7 @@
 const cors = require('cors');
 const express = require('express');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+
 require ('dotenv').config();
 const app = express();
 
@@ -28,9 +29,12 @@ mongoose.connect(process.env.MONGO_DB_CONNECT_URI)
 
 const tracksRoutes = require('./routes/tracks');
 const keysRoutes = require('./routes/keys');
+const usersRoutes = require('./routes/users');
 
 app.use(tracksRoutes)
 app.use(keysRoutes)
+app.use(usersRoutes)
 
 app.use('/api/tracks', tracksRoutes)
 app.use('/api/keys', keysRoutes)
+app.use('/api/users', usersRoutes)
