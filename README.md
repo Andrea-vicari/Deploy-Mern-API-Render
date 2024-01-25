@@ -3,10 +3,7 @@ Installation of MERN application live on vercel, both Back and FrontEnd
 
 
 ## 💡 TODO
-* Try to avoid the duration function
-* Re-create the bg-color effect
-* Delete the Bootstrap btn in order to correctly work
-* Go on, now it plays MP3
+* Set a Users ruote to the server
 
 ===================
 #### BackEnd folder
@@ -14,6 +11,7 @@ Installation of MERN application live on vercel, both Back and FrontEnd
 * Fixed (localhost) CORS error
 * MONGO_DB_CONNECT_URI and PORT (4000)
 * Ok the end points at /api/tracks
+* Ok the end points at /api/keys
 * Ok SCHEMAS and CONTROLLERS
 * Connection with MongoDB OK
 
