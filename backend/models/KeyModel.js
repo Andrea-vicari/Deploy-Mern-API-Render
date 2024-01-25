@@ -13,6 +13,11 @@ const keySchema = new mongoose.Schema({
         type: String,
         required: true
         }
+        ,
+        trackName:{
+        type: String,
+        required: true
+        }
 
 
 },{ timestamps:true })

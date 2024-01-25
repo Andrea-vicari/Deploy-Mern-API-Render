@@ -23,8 +23,6 @@ function Update (){
         makeAPICall();
       }, [])
 
-
-
     // Play Function
     function playMp3(toPlay){
       let mp3ToPlay = document.getElementById(toPlay);
@@ -39,11 +37,11 @@ function Update (){
      // Here the Crud operation
 
 
-      const handleClick = async (trackUrl)=>{
+      const handleClick = async (trackUrl, trackName)=>{
 
 
 
-            const key = {trackUrl};
+            const key = {trackUrl, trackName};
 
 
             const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys/${id}`,{
@@ -74,7 +72,7 @@ function Update (){
     return(
         <main className="container">
 
-                    <h1 className="h1 mb-3 text-white">Edit Key: {id}</h1>
+                    <h1 className="h1 mb-3 text-white">Edit Key</h1>
                     <p className="text-white">Choose the Track for this key from a collection of more than 30 tracks</p>
           <div className="container-fluid d-flex flex-wrap px-0 justify-content-center">
                     {mp3Url.map((e)=>{
@@ -86,7 +84,7 @@ function Update (){
                           <div className="card-body">
                           <audio className="clip" id={e.trackName} src={e.trackUrl}></audio>
                           <i className="fa fa-play  w-100 py-2 mb-2 mx-1" type="submit" onClick={()=>playMp3(e.trackName)}> Play</i>
-                          <i className="fa fa-save  w-100 py-2 mx-1" type="submit" onClick={()=>handleClick(e.trackUrl)}> Use Track</i>
+                          <i className="fa fa-save  w-100 py-2 mx-1" type="submit" onClick={()=>handleClick(e.trackUrl, e.trackName)}> Use Track</i>
                           </div>
 
 
