@@ -39,20 +39,19 @@ function Update (){
      // Here the Crud operation
 
 
-      const handleClick = async (nuovoURL)=>{
+      const handleClick = async (trackUrl)=>{
 
 
 
-            const key = {nuovoURL};
+            const key = {trackUrl};
 
-            console.log(nuovoURL)
 
             const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys/${id}`,{
 
               method : 'PATCH',
-              body: key,
+              body: JSON.stringify(key),
               headers:{
-                'Content-Type': 'text'
+                'Content-Type': 'application/json'
               }
             })
 
@@ -71,9 +70,6 @@ function Update (){
 
 
       }
-
-
-
 
     return(
         <main className="container">
