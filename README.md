@@ -1,6 +1,9 @@
 # DRUMPAD deployed on VERCEL
 Installation of MERN application live on vercel, both Back and FrontEnd
 
+## 🔥 Remember
+add the SALT variable to the Env variable in the development
+
 
 ## 💡 TODO [RECAP 26 JAN]
 * Set routes and tested with postman
