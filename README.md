@@ -2,9 +2,11 @@
 Installation of MERN application live on vercel, both Back and FrontEnd
 
 
-## 💡 TODO
-* Set a Users ruote to the server
-
+## 💡 TODO [RECAP 26 JAN]
+* Set routes and tested with postman
+* (api/users/login) Response OK
+* (api/users/Signup) Response OK
+* Set OK UserSchema and UsersControllers
 ===================
 #### BackEnd folder
 * Set up server.js
