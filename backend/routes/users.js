@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', viewAllUsers);
 
 // Get Single
-router.get('/:id', getSingleUser);
+router.get('/:id', getSingleUser)
 
 // POST a new track
 router.post('/', createNewUser);
