@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React from 'react'
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 
-const Login = () => {
+
+function Login() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const navigate = useNavigate()
@@ -10,45 +12,61 @@ const Login = () => {
     axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:8080/api/users', {email, password})
+        axios.post('http://localhost:4000/login', {email, password})
         .then(res => {
-            console.log(res)
-            if(res.data === "Success") {
-                window.location.href = "/"
+            console.log("login: " + res.data);
+            if(res.data.Status === "Success") {
+                if(res.data.role === "admin") {
+                    navigate('/dashboard')
+                } else {
+                    navigate('/')
+                }
             }
-        })
-        .catch(err => console.log(err))
+        }).catch(err => console.log(err))
     }
-  return (
-    <div className="container col-xl-10 col-xxl-8 px-3 py-3">
-    <div className="row align-items-center g-lg-5 py-3">
-      <div className="col-lg-7 text-center text-lg-start">
-        <h1 className="display-4 fw-bold lh-1 text-white mb-3">Login</h1>
-        <p className="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
-      </div>
-      <div className="col-md-10 mx-auto col-lg-5">
-        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary">
-          <div className="form-floating mb-3">
-            <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div className="form-floating mb-3">
-            <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-            <label for="floatingPassword">Password</label>
-          </div>
-          <div className="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me"/> Remember me
+
+    return(
+        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
+      <div className="bg-white p-3 rounded w-25">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="email">
+              <strong>Email</strong>
             </label>
+            <input
+              type="email"
+              placeholder="Enter Email"
+              autoComplete="off"
+              name="email"
+              className="form-control rounded-0"
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
-          <button className="w-100 btn btn-lg btn-primary disabled" type="submit">Sign up</button>
-          <hr className="my-4"/>
-          <small className="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
-        </form>
+          <div className="mb-3">
+            <label htmlFor="email">
+              <strong>Password</strong>
+            </label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="password"
+              className="form-control rounded-0"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button type="submit" className="btn btn-success w-100 rounded-0">
+            Login
+          </button>
+          </form>
+          <p>Already Have an Account</p>
+          <Link to="/register" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
+            Sign Up
+          </Link>
+
       </div>
     </div>
-  </div>
-  )
+    )
 }
 
-export {Login};
+export default Login;
