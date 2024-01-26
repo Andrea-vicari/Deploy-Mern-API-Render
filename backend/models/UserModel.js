@@ -10,8 +10,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique:true
-        }
-        ,
+        },
         password:{
         type: String,
         required: true
@@ -29,7 +28,7 @@ userSchema.statics.signup = async function(email, password){
         if(!validator.isEmail(email)){
         throw Error('Email non valida')
         }
-        if(!validator.isStrongPassword()){
+        if(!validator.isStrongPassword(password)){
         throw Error('Password non sicura!')
         }
 
