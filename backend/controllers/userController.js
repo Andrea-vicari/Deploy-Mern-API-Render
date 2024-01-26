@@ -1,4 +1,4 @@
-const Users = require('../models/TrackModel');
+const Users = require('../models/User');
 const mongoose = require('mongoose');
 
 
