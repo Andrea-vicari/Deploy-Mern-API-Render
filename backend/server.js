@@ -29,16 +29,17 @@ mongoose.connect(process.env.MONGO_DB_CONNECT_URI)
 
 const tracksRoutes = require('./routes/tracks');
 const keysRoutes = require('./routes/keys');
-const usersRoutes = require('./routes/users');
-const authRoutes = require('./routes/auth');
 
+app.use('/login', (req, res) => {
+    res.send({
+      token: 'test123'
+    });
+  });
 
 app.use(tracksRoutes)
 app.use(keysRoutes)
-app.use(usersRoutes)
-app.use(authRoutes)
+
 
 app.use('/api/tracks', tracksRoutes)
 app.use('/api/keys', keysRoutes)
-app.use('/api/users', usersRoutes)
-app.use('/api/auth', authRoutes)
+

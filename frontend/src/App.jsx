@@ -6,7 +6,7 @@ import Footer from "./Components/Common/Footer"
 import Home from './Components/Home';
 import Update from './Components/Update';
 import DashBoard from './Components/DashBoard';
-import {Login} from './Components/Login';
+import Login from './Components/Login';
 import "../src/index.css";
 
 function App() {
