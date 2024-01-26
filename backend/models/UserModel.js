@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 
+const bcrypt = require('bcryptjs')
+
 const userSchema = new mongoose.Schema({
 
         email:{
@@ -13,7 +15,26 @@ const userSchema = new mongoose.Schema({
         required: true
         }
 
-},{ timestamps:true })
+})
+
+userSchema.statics.signup = async function(email, password){
+
+        const alreadyExists = await this.findOne({email})
+
+        if(alreadyExists){
+
+        throw Error('Email già registrata')
+
+        }
+
+        const salt = await bcrypt.genSalt(Number(process.env.SALT));
+        const hash = await bcrypt.hash(password, salt);
+
+        const user = await this.create({email, password:hash});
+
+        return user
+
+}
 
 
 module.exports = mongoose.model("User", userSchema);
