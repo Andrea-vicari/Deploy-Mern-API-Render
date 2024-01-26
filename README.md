@@ -2,7 +2,7 @@
 Installation of MERN application live on vercel, both Back and FrontEnd
 
 ## 🔥 Remember
-add the SALT variable to the Env variable in the development
+
 
 
 ## 💡 TODO [RECAP 26 JAN]
@@ -10,6 +10,7 @@ add the SALT variable to the Env variable in the development
 * (api/users/login) Response OK
 * (api/users/Signup) Response OK
 * Set OK UserSchema and UsersControllers
+* Ok validation set in userSchema
 ===================
 #### BackEnd folder
 * Set up server.js
