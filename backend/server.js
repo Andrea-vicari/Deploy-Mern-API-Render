@@ -41,5 +41,5 @@ app.use(usersRoutes)
 
 app.use('/api/tracks', tracksRoutes)
 app.use('/api/keys', keysRoutes)
-app.use('/api/user', usersRoutes)
+app.use('/api/users', usersRoutes)
 
