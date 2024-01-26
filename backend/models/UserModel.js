@@ -19,6 +19,18 @@ const userSchema = new mongoose.Schema({
 
 userSchema.statics.signup = async function(email, password){
 
+        // Validations
+        if(!email || !password){
+
+        throw Error('Tutti i campi devono essere compilati')
+        }
+        if(!validator.isEmail(email)){
+        throw Error('Email non valida')
+        }
+        if(!validator.isStrongPassword()){
+        throw Error('Password non sicura')
+        }
+
         const alreadyExists = await this.findOne({email})
 
         if(alreadyExists){
