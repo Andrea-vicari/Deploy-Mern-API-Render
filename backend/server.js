@@ -4,9 +4,12 @@ const mongoose = require('mongoose');
 require ('dotenv').config();
 const app = express();
 
-
-
 app.use(express.json());
+
+app.use((req,res, next)=>{
+    console.log(req.path, req.method)
+    next()
+})
 
 // !!! Important to avoid CORS block (!! Check the final slash / )
 /* USE THIS FOR DEPLOYMENT: https://deploy-mern-api-render-frontend.vercel.app/ */
