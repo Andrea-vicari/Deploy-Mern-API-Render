@@ -11,7 +11,7 @@ export const useSignup = () =>{
         setisLoading(true)
         setError(null)
 
-        const response = await fetch('/api/user/signup', {
+        const response = await fetch('https://deploy-mern-api-render.vercel.app/api/users/signup', {
 
             method: 'POST',
             body: JSON.stringify({email, password}),
