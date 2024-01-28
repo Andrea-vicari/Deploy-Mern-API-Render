@@ -4,9 +4,15 @@ import { Display } from "../Display";
 import AudioRecorder from "../AudioRecorder";
 import { LogoTemp } from "../LogoTemp";
 
+import { useLogout } from "../../hooks/useLogout";
+
 function Header () {
 
+    const {logout} = useLogout()
 
+    const handleLogout = () =>{
+      logout()
+    }
 
     return(
         <div className="container bg-black">
@@ -36,7 +42,7 @@ function Header () {
                             Dashboard
                             </Link>
                             </li>
-                          <li>Pippo</li>
+                          <li className="btn" onClick={handleLogout}>Logout</li>
                           <li>Pluto</li>
                         </ul>
 
