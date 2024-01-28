@@ -5,7 +5,7 @@ Installation of MERN application live on vercel, both Back and FrontEnd
 
 
 
-## 💡 TODO [RECAP 26 JAN]
+## 💡 TODO [RECAP 28 JAN]
 * Set routes and tested with postman
 * (api/users/login) Response OK
 * (api/users/Signup) Response OK
@@ -22,8 +22,8 @@ Installation of MERN application live on vercel, both Back and FrontEnd
 * Connection with MongoDB OK
 
 #### Front-end folder
-* Installed React with Vite package
-* Set up a makeAPICall() function to fetch from server
+* Hooks
+ * UseAuthContext
 
 
 
