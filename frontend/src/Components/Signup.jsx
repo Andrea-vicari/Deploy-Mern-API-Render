@@ -1,16 +1,19 @@
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useSignup } from "../hooks/useSignup";
 
 function Signup() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    const {signup, isLoading, error} = useSignup
+
 
     const handleSubmit = async (e) => {
       e.preventDefault()
 
-      console.log(email,password)
+      await signup(email, password)
     }
 
   return (
@@ -45,9 +48,10 @@ function Signup() {
               value={password}
             />
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0">
-            Register
+          <button type="submit" className="btn btn-success w-100 rounded-0" disabled={isLoading}>
+            Sign Up
           </button>
+          {error && <div className="error">{error}</div>}
           </form>
           <p>Already Have an Account</p>
           <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
