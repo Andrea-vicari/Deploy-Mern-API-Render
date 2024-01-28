@@ -10,6 +10,7 @@ import Login from './Components/Login';
 import Signup from './Components/Signup';
 import "../src/index.css";
 
+
 function App() {
 
 
@@ -25,6 +26,7 @@ function App() {
               <Route path="/dashboard" element={<DashBoard />} />
               <Route path='/update/:id' element={<Update />}></Route>
               <Route path='/login' element={<Login />}></Route>
+              <Route path='/signup' element={<Signup />}></Route>
             </Routes>
       <Footer />
     </React.Fragment>
