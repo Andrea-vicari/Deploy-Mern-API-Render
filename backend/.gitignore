@@ -1,3 +1,4 @@
 .env
+luigi.txt
 backend/.env
 backend/.env_example
