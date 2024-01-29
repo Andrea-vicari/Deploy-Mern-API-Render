@@ -51,6 +51,11 @@ function Update (){
 
             openModal(trackName);
 
+            if(!user){
+              setError('Devi essere loggato')
+              return
+            }
+
 
             const key = {trackUrl, trackName};
 
