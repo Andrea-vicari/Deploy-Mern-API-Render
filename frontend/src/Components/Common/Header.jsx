@@ -5,10 +5,11 @@ import AudioRecorder from "../AudioRecorder";
 import { LogoTemp } from "../LogoTemp";
 
 import { useLogout } from "../../hooks/useLogout";
-
 function Header () {
 
-    const {logout} = useLogout()
+    const { logout } = useLogout()
+
+    const user = JSON.parse(localStorage.getItem('user'))
 
     const handleLogout = () =>{
       logout()
@@ -38,12 +39,18 @@ function Header () {
                             </Link>
                             </li>
                             <li>
-                             <Link to="/login" >
+                             <Link to="/dashboard" >
                             Dashboard
                             </Link>
                             </li>
-                          <li className="btn" onClick={handleLogout}>Logout</li>
-                          <li>Pluto</li>
+
+                            <li></li>
+                            <li className="btn" onClick={handleLogout}>Logout</li>
+
+
+
+
+
                         </ul>
 
                       </div>
