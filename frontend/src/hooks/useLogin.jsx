@@ -7,7 +7,6 @@ export const useLogin = () =>{
     const [isLoading, setisLoading] = useState(null)
     const { user, dispatch } = UseAuthContext()
 
-    console.log(user)
 
     const login = async (email, password) => {
         setisLoading(true)
@@ -20,6 +19,7 @@ export const useLogin = () =>{
             headers:{
                 'Content-Type': 'application/json',
                 'Authorization' : `Bearer ${user.token}`
+
               }
 
         })
