@@ -5,7 +5,7 @@ export const useSignup = () =>{
 
     const [error, setError] = useState(null)
     const [isLoading, setisLoading] = useState(null)
-    const { dispatch  } = UseAuthContext()
+    const { user, dispatch  } = UseAuthContext()
 
     const signup = async (email, password) => {
         setisLoading(true)
@@ -17,6 +17,7 @@ export const useSignup = () =>{
             body: JSON.stringify({email, password}),
             headers:{
                 'Content-Type': 'application/json',
+                'Authorization' : `Bearer ${user.token}`
               }
 
         })

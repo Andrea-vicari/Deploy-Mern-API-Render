@@ -5,8 +5,6 @@ const {signupUser, loginUser} = require('../controllers/userController');
 
 const router = express.Router();
 
-
-
 // SignUp
 router.post('/signup', signupUser);
 
