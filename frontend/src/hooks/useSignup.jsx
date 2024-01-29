@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { UseAuthContext } from "./UseAuthContext";
+import { UseAuthContext } from "../hooks/UseAuthContext"
 
 export const useSignup = () =>{
 
@@ -17,7 +17,6 @@ export const useSignup = () =>{
             body: JSON.stringify({email, password}),
             headers:{
                 'Content-Type': 'application/json',
-                'Authorization' : `Bearer ${user.token}`
               }
 
         })
