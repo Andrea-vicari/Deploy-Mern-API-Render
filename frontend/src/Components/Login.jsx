@@ -1,6 +1,6 @@
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useLogin } from "../hooks/useLogin";
 
 function Login() {
@@ -51,9 +51,9 @@ function Login() {
           </button>
           {error && <div className="error">{error}</div>}
           </form>
-          <p>Already Have an Account</p>
-          <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-            Login
+          <p className="mt-3">Don't have an account?</p>
+          <Link to="/signup" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
+            Signup
           </Link>
 
       </div>

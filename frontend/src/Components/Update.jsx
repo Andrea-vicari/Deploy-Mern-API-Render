@@ -52,7 +52,6 @@ function Update (){
             openModal(trackName);
 
 
-
             const key = {trackUrl, trackName};
 
 
@@ -61,7 +60,8 @@ function Update (){
               method : 'PATCH',
               body: JSON.stringify(key),
               headers:{
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization' : `Bearer ${user.token}`
               }
             })
 
