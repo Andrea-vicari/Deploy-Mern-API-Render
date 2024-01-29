@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { UseAuthContext } from "../hooks/UseAuthContext"
+import { UseAuthContext } from "./UseAuthContext"
 
 export const useLogin = () =>{
 
     const [error, setError] = useState(null)
     const [isLoading, setisLoading] = useState(null)
-    const { dispatch } = UseAuthContext()
-    const {user} = UseAuthContext()
+    const { user, dispatch } = UseAuthContext()
+
 
     const login = async (email, password) => {
         setisLoading(true)
@@ -18,7 +18,7 @@ export const useLogin = () =>{
             body: JSON.stringify({email, password}),
             headers:{
                 'Content-Type': 'application/json',
-                'Authorization' : `Bearer ${user.token}`
+
               }
 
         })
