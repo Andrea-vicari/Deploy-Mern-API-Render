@@ -1,18 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { UseAuthContext } from "../hooks/UseAuthContext"
 
 
 function SingleKey (){
 
     const [data, setData] = useState([]);
-    const {user} = UseAuthContext()
+
 
     const makeAPICall = async () => {
         try {
-          const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys/', {mode:'cors', headers:{
-            'Authorization' : `Bearer ${user.token}`
-          }});
+          const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys/', {mode:'cors'});
           const data = await response.json();
           setData(data)
           console.log({ data })
@@ -22,11 +19,8 @@ function SingleKey (){
         }
       }
       useEffect(() => {
-        if(user){
-           makeAPICall();
-        }
-
-      }, [user])
+        makeAPICall();
+      }, [])
 
     function addColor (i){
 

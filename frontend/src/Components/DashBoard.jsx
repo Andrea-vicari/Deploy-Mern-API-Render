@@ -3,17 +3,19 @@ import mp3List from "./mp3.json";
 import { useState, useEffect } from "react";
 import keyList from "./keyList.json";
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import { UseAuthContext } from "../hooks/UseAuthContext"
 
 function DashBoard (){
 
-
-
   const [data, setData] = useState([])
   const navigate = useNavigate();
+  const {user} = UseAuthContext()
 
     const makeAPICall = async () => {
       try {
-        const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys', {mode:'cors'});
+        const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys', {mode:'cors',headers:{
+          'Authorization' : `Bearer ${user.token}`
+        }});
         const data = await response.json();
         setData(data)
         console.log({ data })

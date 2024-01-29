@@ -1,15 +1,18 @@
 import React from 'react'
 import { useEffect , useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-
+import { UseAuthContext } from "../hooks/UseAuthContext"
 
 function Update (){
 
     const [mp3Url, setMp3URL] = useState([]);
+    const {user} = UseAuthContext()
 
     const makeAPICall = async () => {
         try {
-          const response = await fetch('https://deploy-mern-api-render.vercel.app/api/tracks/', {mode:'cors'});
+          const response = await fetch('https://deploy-mern-api-render.vercel.app/api/tracks/', {mode:'cors', headers:{
+            'Authorization' : `Bearer ${user.token}`
+          }});
           const data = await response.json();
           setMp3URL(data)
           console.log(data)
