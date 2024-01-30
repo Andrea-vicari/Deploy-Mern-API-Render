@@ -61,10 +61,13 @@ const deleteKey = async (req, res)=> {
 // Update a single track
 const updateKey = async (req, res)=> {
 
+    const userID = req.user_id
+    const {trackName, trackUrl } = req.body
 
-    const {trackName, trackUrl, user_id} = req.body
+    consoel.log(req.body)
 
     const { id } = req.params;
+
 
     if (!mongoose.Types.ObjectId.isValid(id)){
         return res.status(404).json({error: "No Key found"})
