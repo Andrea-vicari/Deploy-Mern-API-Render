@@ -61,8 +61,8 @@ const deleteKey = async (req, res)=> {
 // Update a single track
 const updateKey = async (req, res)=> {
 
-    const userId = req.user_id
-    const {trackName, trackUrl} = req.body
+
+    const {trackName, trackUrl, user_id} = req.body
 
     const { id } = req.params;
 
@@ -70,7 +70,7 @@ const updateKey = async (req, res)=> {
         return res.status(404).json({error: "No Key found"})
     }
 
-    const key = await Keys.findByIdAndUpdate({_id: id, userId},{
+    const key = await Keys.findByIdAndUpdate({_id: id},{
         ...req.body
     })
 
