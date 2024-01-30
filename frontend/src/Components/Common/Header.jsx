@@ -47,7 +47,7 @@ function Header () {
 
                             {user && (
                                <div>
-                              <li>{user.email}</li>
+                              <li className="text-white">{user.email}</li>
                             <li className="btn" onClick={handleLogout}>Logout</li>
                             </div>
                             )

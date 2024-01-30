@@ -7,41 +7,20 @@ import { UseAuthContext } from "../hooks/UseAuthContext";
 
 function CreateKey (){
 
-  const [data, setData] = useState([])
-  const navigate = useNavigate();
-
-
-    const makeAPICall = async () => {
-      try {
-        const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys/', {mode:'cors'});
-        const data = await response.json();
-
-        setData(data)
-        console.log({ data })
-
-      }
-      catch (e) {
-        console.log(e)
-      }
-    }
-    useEffect(() => {
-      makeAPICall();
-    }, [])
-
-
 
     const [keyNumber, setKeyNumber] = useState('')
     const [trackUrl, setTrackUrl] = useState('')
     const {user} = UseAuthContext()
 
 
-    const handleSubmitKey = async ()=>{
-
+    const handleSubmitKey = async (e)=>{
+            e.preventDefault
             if(!user){
               setError('Devi essere loggato')
               return
             }
 
+            console.log(user)
 
             const key = {keyNumber, trackUrl, user};
 
@@ -103,7 +82,7 @@ function CreateKey (){
               value={trackUrl}
             />
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0">
+          <button type="submit" className="btn btn-success w-100 rounded-0" onChange={(e)=>{handleSubmitKey(e.user)}}>
             Sign Up
           </button>
 
