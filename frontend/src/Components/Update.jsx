@@ -61,7 +61,7 @@ function Update (){
 
 
             const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys/${id}`,{
-
+              mode:"cors",
               method : 'PATCH',
               body: JSON.stringify(key),
               headers:{

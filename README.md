@@ -1,29 +1,23 @@
 # DRUMPAD deployed on VERCEL
 Installation of MERN application live on vercel, both Back and FrontEnd
 
-## 🔥 Remember
-
-
-
-## 💡 TODO [RECAP 28 JAN]
-* Set routes and tested with postman
-* (api/users/login) Response OK
-* (api/users/Signup) Response OK
-* Set OK UserSchema and UsersControllers
-* Ok validation set in userSchema
+## 🔥 [RECAP 29 JAN]
 ===================
 #### BackEnd folder
-* Set up server.js
-* Fixed (localhost) CORS error
-* MONGO_DB_CONNECT_URI and PORT (4000)
-* Ok the end points at /api/tracks
-* Ok the end points at /api/keys
-* Ok SCHEMAS and CONTROLLERS
-* Connection with MongoDB OK
+* Connection with  LIVE MongoDB => OK
+* / Controllers: Key, Track, User
+* / Models: Key(with userId parameter), Track, User
+* / Keys: Key(disabled middleware), tracks, users
+* Server.js (🔥 Remember to re add the front-end vercel path!!)
 
+## 💡 TODO
+===================
 #### Front-end folder
-* Hooks
- * UseAuthContext
+* Test the user register and login:
+    * New User, New User With Mail already and weak password => OK
+    * Login: Ok both users
+* Style errors
+* Add a CreateKey form
 
 
 

@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import { Display } from "../Display";
 import AudioRecorder from "../AudioRecorder";
 import { LogoTemp } from "../LogoTemp";
+import { UseAuthContext } from "../../hooks/UseAuthContext";
 
 import { useLogout } from "../../hooks/useLogout";
 function Header () {
 
     const { logout } = useLogout()
 
-    const user = JSON.parse(localStorage.getItem('user'))
+    const {user} = UseAuthContext()
 
     const handleLogout = () =>{
       logout()
@@ -44,8 +45,15 @@ function Header () {
                             </Link>
                             </li>
 
-                            <li></li>
+                            {user && (
+                               <div>
+                              <li>{user.email}</li>
                             <li className="btn" onClick={handleLogout}>Logout</li>
+                            </div>
+                            )
+                            }
+
+
 
 
 

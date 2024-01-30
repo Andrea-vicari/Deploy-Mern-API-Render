@@ -49,7 +49,7 @@ function Login() {
           <button type="submit" className="btn btn-success w-100 rounded-0" disabled={isLoading}>
             Login
           </button>
-          {error && <div className="error">{error}</div>}
+          {error && <div className="error text-danger fs-4 mt-3">{error}</div>}
           </form>
           <p className="mt-3">Don't have an account?</p>
           <Link to="/signup" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
