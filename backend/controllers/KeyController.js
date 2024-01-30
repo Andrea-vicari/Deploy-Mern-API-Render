@@ -61,8 +61,8 @@ const deleteKey = async (req, res)=> {
 // Update a single track
 const updateKey = async (req, res)=> {
 
-    const userID = req.user_id
-    const {trackName, trackUrl } = req.body
+
+    const {trackName, trackUrl, user } = req.body
 
     console.log(req.body)
 
