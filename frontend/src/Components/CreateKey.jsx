@@ -15,10 +15,10 @@ function CreateKey (){
       try {
         const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys/', {mode:'cors'});
         const data = await response.json();
-        const figa = response.useParams
+
         setData(data)
         console.log({ data })
-        console.log(figa)
+
       }
       catch (e) {
         console.log(e)
@@ -48,8 +48,8 @@ function CreateKey (){
             console.log(key)
 
 
-            const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys/`,{
-              method : 'GET',
+            const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys`,{
+              method : 'POST',
               body: JSON.stringify(key),
               headers:{
                 'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ function CreateKey (){
               </select>
               </div>
 
-              <button className="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+              <button className="w-100 btn btn-lg btn-primary" type="submit">Comfirm</button>
 
             </form>
           </div>
