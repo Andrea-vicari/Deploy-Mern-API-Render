@@ -12,11 +12,12 @@ export const useLogin = () =>{
         setError(null)
 
         const response = await fetch('https://deploy-mern-api-render.vercel.app/api/users/login', {
-
+            mode:"cors",
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers:{
                 'Content-Type': 'application/json',
+                'Authorization' : `Bearer ${user.token}`
 
               }
 
