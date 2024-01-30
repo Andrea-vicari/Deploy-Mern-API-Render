@@ -5,26 +5,26 @@ import { UseAuthContext } from "../hooks/UseAuthContext"
 
 function Update (){
 
+    const [data, setData] = useState([])
     const [mp3Url, setMp3URL] = useState([]);
     const {user} = UseAuthContext()
 
     const makeAPICall = async () => {
-        try {
-          const response = await fetch('https://deploy-mern-api-render.vercel.app/api/tracks/', {mode:'cors', headers:{
-            'Authorization' : `Bearer ${user.token}`
-          }});
-          const data = await response.json();
-          setMp3URL(data)
-          console.log(data)
-
-        }
-        catch (e) {
-          console.log(e)
-        }
+      try {
+        const response = await fetch('https://deploy-mern-api-render.vercel.app/api/tracks', {mode:'cors',headers:{
+          'Authorization' : `Bearer ${user.token}`
+        }});
+        const data = await response.json();
+        setData(data)
+        console.log({ data })
       }
-      useEffect(() => {
-        makeAPICall();
-      }, [])
+      catch (e) {
+        console.log(e)
+      }
+    }
+    useEffect(() => {
+      makeAPICall();
+    }, [])
 
     // Play Function
     function playMp3(toPlay){
@@ -87,7 +87,7 @@ function Update (){
                     <h1 className="h1 mb-3 text-white">Edit Key</h1>
                     <p className="text-white">Choose the Track for this key from a collection of more than 30 tracks</p>
           <div className="container-fluid d-flex flex-wrap px-0 justify-content-center">
-                    {mp3Url.map((e)=>{
+                    {data.map((e)=>{
                       return (
 
                           <div className="col-5 mb-2 mx-2" key={e._id}>
