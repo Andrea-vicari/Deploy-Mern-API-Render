@@ -6,17 +6,19 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { UseAuthContext } from "../hooks/UseAuthContext";
 
 function CreateKey (){
-  const {user} = UseAuthContext()
+
   const [data, setData] = useState([])
   const navigate = useNavigate();
 
 
     const makeAPICall = async () => {
       try {
-        const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys', {mode:'cors'});
+        const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys/', {mode:'cors'});
         const data = await response.json();
+        const figa = response.useParams
         setData(data)
         console.log({ data })
+        console.log(figa)
       }
       catch (e) {
         console.log(e)
@@ -30,6 +32,8 @@ function CreateKey (){
 
     const [keyNumber, setKeyNumber] = useState('')
     const [trackUrl, setTrackUrl] = useState('')
+    const {user} = UseAuthContext()
+
 
     const handleSubmitKey = async ()=>{
 
@@ -45,8 +49,7 @@ function CreateKey (){
 
 
             const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys/`,{
-              mode:"cors",
-              method : 'POST',
+              method : 'GET',
               body: JSON.stringify(key),
               headers:{
                 'Content-Type': 'application/json',
@@ -58,6 +61,9 @@ function CreateKey (){
 
             if(!response.ok){
               return alert("NOT OK")
+            }
+            if(response){
+              return alert(json)
             }
 
     }

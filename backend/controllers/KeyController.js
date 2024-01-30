@@ -29,9 +29,9 @@ const getSingleKey = async (req, res)=> {
 const createNewKey = async (req, res)=> {
 
     try{
-        const user_id = req.user_id
-        const {keyNumber, trackUrl} = req.body
-        const key = await Keys.create({keyNumber, trackUrl, user_id})
+
+        const {userId, keyNumber, trackUrl} = req.body
+        const key = await Keys.create({userId, keyNumber, trackUrl})
         res.status(200).json(key)
     }
 
