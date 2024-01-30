@@ -64,7 +64,7 @@ const updateKey = async (req, res)=> {
     const userID = req.user_id
     const {trackName, trackUrl } = req.body
 
-    consoel.log(req.body)
+    console.log(req.body)
 
     const { id } = req.params;
 
