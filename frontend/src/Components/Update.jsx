@@ -70,15 +70,11 @@ function Update (){
               }
             })
 
-            console.log(response)
-
             const json = await response.json();
 
             if(!response.ok){
-              alert("NOT OK")
+              return alert("NOT OK")
             }
-
-
 
 
       }
