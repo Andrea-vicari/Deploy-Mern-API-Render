@@ -1,67 +1,44 @@
-import { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { Link } from 'react-router-dom'
-import { useSignup } from "../hooks/useSignup";
+import React from "react";
+import mp3List from "./mp3.json";
+import { useState, useEffect } from "react";
+import keyList from "./keyList.json";
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { UseAuthContext } from "../hooks/UseAuthContext"
 
-function CreateKey() {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+function CreateKey (){
 
-    const {signup, isLoading, error} = useSignup()
+  const [data, setData] = useState([])
+  const navigate = useNavigate();
+  const {user} = UseAuthContext()
 
 
-    const handleSubmit = async (e) => {
-      e.preventDefault()
 
-      await signup(email, password)
-    }
+    return(
+      <div className="container mx-auto px-3 py-3 bg-black">
+          <h3 className="text-white text-center">Dashboard</h3>
+          <p className="text-secondary text-center">Click Edit to change the Track</p>
+          <div className="row mb-3 text-center">
+          {keyList.map((e)=>{
+                  return (
+                    <div className="col-4 mb-2" key={e.id}>
+                    <div className="card">
+                        <h5 className="card-header">{e.id}</h5>
+                        <div className="card-body">
+                          <Link to={`/update/${e.id}`} className="btn btn-primary">Edit</Link>
+                        </div>
+                      </div>
 
-  return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-      <div className="bg-white p-3 rounded w-75">
-        <h2>Register</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="email">
-              <strong>Email</strong>
-            </label>
-            <input
-              type="email"
-              placeholder="Enter Email"
-              autoComplete="off"
-              name="email"
-              className="form-control rounded-0"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="email">
-              <strong>Password</strong>
-            </label>
-            <input
-              type="password"
-              placeholder="Enter Password"
-              name="password"
-              className="form-control rounded-0"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-            />
-          </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0" disabled={isLoading}>
-            Sign Up
-          </button>
-          {error && <div className="error text-danger fs-4 mt-3">{error}</div>}
-          </form>
-          <p className="mt-3">Already Have an Account?</p>
-          <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-            Login
-          </Link>
+                    </div>
+          );})}
+
+
+
+
+        </div>
+
 
       </div>
-    </div>
-  );
+    )
 }
 
-export default CreateKey;
-
+export default CreateKey
