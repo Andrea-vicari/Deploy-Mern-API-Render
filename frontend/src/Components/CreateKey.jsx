@@ -48,7 +48,7 @@ function CreateKey (){
             console.log(key)
 
 
-            const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys`,{
+            const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys/`,{
               method : 'POST',
               body: JSON.stringify(key),
               headers:{
