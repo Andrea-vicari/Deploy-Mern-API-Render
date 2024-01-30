@@ -75,25 +75,39 @@ function CreateKey (){
             <p className="col-lg-10 fs-4 text-white-50">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
           </div>
           <div className="col-md-10 mx-auto col-lg-5">
-            <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary" onChange={handleSubmitKey}>
-              <div className="form-floating mb-3">
-              <select className="form-select" aria-label="Default select example" onChange={(e)=>setKeyNumber(e.target.value)}>
-                  <option selected>Open this select menu</option>
-                  <option value={1}>KEY 1</option>
-                  <option value={2}>KEY 2</option>
-              </select>
-              </div>
-              <div className="form-floating mb-3">
-              <select className="form-select" aria-label="Default select example" onChange={(e)=>{setTrackUrl(e.target.value)}}>
-                  <option selected>Open this select menu</option>
-                  <option value={"/tracks/psy-bass-beat-sample-101275.mp3"}>Psy Bass</option>
-                  <option value={"/tracks/quest-luv-loop-4-170bpm-119701.mp3"}>Loop</option>
-              </select>
-              </div>
+          <form onSubmit={handleSubmitKey}>
+          <div className="mb-3">
+            <label htmlFor="email">
+              <strong>Key Number</strong>
+            </label>
+            <input
+              type="number"
+              placeholder="Key Number"
+              autoComplete="off"
+              name="keyNumber"
+              className="form-control rounded-0"
+              onChange={(e) => setKeyNumber(e.target.value)}
+              value={keyNumber}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="email">
+              <strong>Password</strong>
+            </label>
+            <input
+              type="string"
+              placeholder="Enter trackUrl"
+              name="trackUrl"
+              className="form-control rounded-0"
+              onChange={(e) => setTrackUrl(e.target.value)}
+              value={trackUrl}
+            />
+          </div>
+          <button type="submit" className="btn btn-success w-100 rounded-0">
+            Sign Up
+          </button>
 
-              <button className="w-100 btn btn-lg btn-primary" type="submit">Comfirm</button>
-
-            </form>
+          </form>
           </div>
         </div>
       </div>

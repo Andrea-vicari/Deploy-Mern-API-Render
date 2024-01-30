@@ -42,14 +42,10 @@ function Update (){
     console.log(id)
     const navigate = useNavigate();
 
-    function openModal(trackName){
-      document.getElementById(trackName).classList.add('d-block')
-    }
 
 
       const handleClick = async (trackUrl, trackName)=>{
 
-            openModal(trackName);
 
             if(!user){
               setError('Devi essere loggato')
@@ -103,37 +99,7 @@ function Update (){
 
                             </div>
 
-                            <div key={e._id} id={e.trackName} className="modal modal-sheet bg-dark px-4 py-md-5" tabIndex="-1" role="dialog">
-                              <div className="modal-dialog modal-xl bg-dark" role="document">
-                                <div className="modal-content rounded-4 shadow bg-dark">
-                                  <div className="modal-header d-block">
-                                    <h2 className="modal-title text-white">GOOD</h2>
-                                </div>
-                                  <div className="modal-body py-3 text-white">
 
-                                  <h4 className="text-white mt-3 fw-bold">Ciao</h4>
-                                    </div>
-                                    <div className="modal-body py-3 text-white" id="modal_cont">
-                                    <p className='fs-5'>
-                                      Lorem Ipsum figa
-                                    </p>
-                                    <div>
-                                    </div>
-
-
-                                    </div>
-
-                                  <div className="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
-
-                                    <div className="modal-footer">
-                                      <button type="button" onClick={()=>closeModal(i)} className="btn btn-danger align-items-center" data-bs-dismiss="modal" aria-label="Close">
-                                      <i className='fa fa-times px-2 fs-4'></i>Close
-                                        </button>
-                                    </div>
-                                  </div>
-                              </div>
-                            </div>
-                            </div>
                           </div>
 
                     );})}

@@ -31,7 +31,7 @@ const createNewKey = async (req, res)=> {
     try{
 
         const {trackName, trackUrl, user } = req.body
-        const key = await Keys.create(trackName, trackUrl, user)
+        const key = await Keys.create({trackName, trackUrl, user})
         res.status(200).json(key)
     }
 
