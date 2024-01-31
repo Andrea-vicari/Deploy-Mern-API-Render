@@ -17,7 +17,9 @@ function CreateKey (){
     const handleSubmitKey = async (e)=>{
             e.preventDefault()
 
-            console.log(user.email)
+            const user_id = user.user_id;
+
+            console.log(user.user_id)
 
 
 
