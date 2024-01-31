@@ -22,13 +22,9 @@ function CreateKey (){
             console.log(user.user_id)
 
 
-
             const key = {keyNumber, trackUrl, user_id};
 
-
-
             console.log(key)
-
 
             const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys/`,{
               method : 'POST',
@@ -49,7 +45,7 @@ function CreateKey (){
             if(response){
               setKeyNumber('')
               setTrackUrl('')
-              setUser(user_id)
+
               setError(null)
               alert('New Key added', json)
             }
