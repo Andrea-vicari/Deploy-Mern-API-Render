@@ -10,8 +10,9 @@ function CreateKey (){
 
     const [keyNumber, setKeyNumber] = useState('')
     const [trackUrl, setTrackUrl] = useState('')
-    const {user} = UseAuthContext()
 
+    const {user} = UseAuthContext()
+    const [userAdd, setUserAdd] = useState (user)
 
     const handleSubmitKey = async (e)=>{
             e.preventDefault
@@ -82,7 +83,8 @@ function CreateKey (){
               value={trackUrl}
             />
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0" onChange={(e)=>{handleSubmitKey(e.user)}}>
+          <button type="submit" className="btn btn-success w-100 rounded-0" onChange={(e) => setUserAdd(user)}
+              value={user}>
             Sign Up
           </button>
 
