@@ -83,7 +83,7 @@ function CreateKey (){
               value={trackUrl}
             />
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0" onChange={(e) => setUserAdd(user)}
+          <button type="submit" className="btn btn-success w-100 rounded-0" onChange={() => setUserAdd(user)}
               value={user}>
             Sign Up
           </button>
