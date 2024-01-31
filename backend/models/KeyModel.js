@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
 const keySchema = new mongoose.Schema({
-        userId:{
+        user_id:{
         type: Number,
-        required: false
+        required: true
         },
         keyNumber:{
         type: Number,

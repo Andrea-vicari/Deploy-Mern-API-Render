@@ -10,20 +10,20 @@ function CreateKey (){
 
     const [keyNumber, setKeyNumber] = useState('')
     const [trackUrl, setTrackUrl] = useState('')
-
+    const [error, setError] = useState(null)
     const {user} = UseAuthContext()
-    const [userAdd, setUserAdd] = useState (user)
+    const {user_id, setUser} = useState('')
 
     const handleSubmitKey = async (e)=>{
-            e.preventDefault
-            if(!user){
-              setError('Devi essere loggato')
-              return
-            }
+            e.preventDefault()
+
+            console.log(user.email)
 
 
 
-            const key = {keyNumber, trackUrl};
+            const key = {keyNumber, trackUrl, user_id};
+
+
 
             console.log(key)
 
@@ -40,10 +40,13 @@ function CreateKey (){
             const json = await response.json();
 
             if(!response.ok){
-              return alert("NOT OK")
+              setError(json.error)
             }
             if(response){
-              return alert(json)
+              setKeyNumber('')
+              setTrackUrl('')
+              setError(null)
+              alert('New Key added', json)
             }
 
     }
@@ -57,7 +60,7 @@ function CreateKey (){
           <div className="col-md-10 mx-auto col-lg-5">
           <form onSubmit={handleSubmitKey}>
           <div className="mb-3">
-            <label htmlFor="email">
+            <label>
               <strong>Key Number</strong>
             </label>
             <input
@@ -83,8 +86,7 @@ function CreateKey (){
               value={trackUrl}
             />
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0" onChange={() => setUserAdd(user)}
-              value={user}>
+          <button type="submit" className="btn btn-success w-100 rounded-0" onChange={()=>setUser(user_id)}>
             Sign Up
           </button>
 
