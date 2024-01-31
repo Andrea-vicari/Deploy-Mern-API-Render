@@ -1,14 +1,16 @@
 # DRUMPAD deployed on VERCEL
 Installation of MERN application live on vercel, both Back and FrontEnd
+(🔥 Remember to re add the front-end vercel path!!)
 
-## 🔥 [RECAP 29 JAN]
+
+## 🔥 [RECAP 31 JAN]
 ===================
 #### BackEnd folder
 * Connection with  LIVE MongoDB => OK
 * / Controllers: Key, Track, User
 * / Models: Key(with userId parameter), Track, User
 * / Keys: Key(disabled middleware), tracks, users
-* Server.js (🔥 Remember to re add the front-end vercel path!!)
+* Server.js
 
 ## 💡 TODO
 ===================
