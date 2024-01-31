@@ -71,7 +71,7 @@ function CreateKey (){
           </div>
           <div className="mb-3">
             <label htmlFor="email">
-              <strong>Password</strong>
+              <strong>TrackUrl</strong>
             </label>
             <input
               type="string"
