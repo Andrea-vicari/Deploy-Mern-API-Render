@@ -41,10 +41,13 @@ function CreateKey (){
 
             if(!response.ok){
               setError(json.error)
+              alert(error)
+              return
             }
             if(response){
               setKeyNumber('')
               setTrackUrl('')
+              setUser(user_id)
               setError(null)
               alert('New Key added', json)
             }
@@ -86,7 +89,7 @@ function CreateKey (){
               value={trackUrl}
             />
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0" onChange={()=>setUser(user_id)}>
+          <button type="submit" className="btn btn-success w-100 rounded-0" onChange={()=>setUser({user_id})}>
             Sign Up
           </button>
 
