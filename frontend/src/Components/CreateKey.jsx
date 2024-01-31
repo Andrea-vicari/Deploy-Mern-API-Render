@@ -21,9 +21,9 @@ function CreateKey (){
               return
             }
 
-            console.log(user)
 
-            const key = {keyNumber, trackUrl, user};
+
+            const key = {keyNumber, trackUrl};
 
             console.log(key)
 
