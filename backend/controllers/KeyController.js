@@ -63,7 +63,7 @@ const deleteKey = async (req, res)=> {
 const updateKey = async (req, res)=> {
 
 
-    const {trackName, trackUrl, user } = req.body
+    const {keyNumber, trackUrl, user_id } = req.body
 
     console.log(req.body)
 
