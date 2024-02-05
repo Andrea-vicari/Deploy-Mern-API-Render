@@ -15,6 +15,7 @@ function SingleKey (){
           }});
           const data = await response.json();
           setData(data)
+
           console.log({ data })
         }
         catch (e) {
@@ -56,8 +57,6 @@ function SingleKey (){
         mp3_toplay.onended = function (){
           addColor(i)
         }
-
-
 
     }
 

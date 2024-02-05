@@ -12,13 +12,15 @@ import CreateKey from './Components/CreateKey';
 import "../src/index.css";
 
 import { UseAuthContext } from "./hooks/UseAuthContext"
+import { KeysContextProvider } from "./context/KeysContext";
 
 function App() {
 
   const {user} = UseAuthContext()
   console.log(user)
   return (
-    <React.Fragment>
+    <KeysContextProvider>
+
       <Header />
 
 
@@ -34,7 +36,7 @@ function App() {
 
             </Routes>
       <Footer />
-    </React.Fragment>
+    </KeysContextProvider>
   )
 }
 

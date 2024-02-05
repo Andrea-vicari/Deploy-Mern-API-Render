@@ -52,8 +52,10 @@ function Update (){
               return
             }
 
+            const user_id = user.user_id;
 
-            const key = {trackUrl, trackName, user};
+
+            const key = {trackUrl, trackName, user_id};
 
             console.log(key)
 
