@@ -17,7 +17,9 @@ const getSingleTrack = async (req, res)=> {
             return res.status(404).json({error: "No Track found"})
         }
 
-        const track = await Tracks.findById(id);
+        // Example of fitness
+        // const workout = await Workouts.find({"user":id});
+        const track = await Tracks.find({"keyNumber":id});
 
         if(!track){
           return res.status(400).json({error: "No Track found"})
