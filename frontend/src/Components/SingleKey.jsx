@@ -29,6 +29,8 @@ function SingleKey (){
 
       }, [user])
 
+
+
     function addColor (i){
 
       document.getElementById(i+300).classList.add("d-none");

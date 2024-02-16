@@ -12,6 +12,22 @@ const keySchema = new mongoose.Schema({
         trackUrl:{
         type: String,
         required: true
+        },
+        user:{
+        type: String,
+        required: true
+        },
+        mp3Name:{
+        type: String,
+        required: true
+        },
+        bpm:{
+        type: Number,
+        required: true
+        },
+        genre:{
+        type: String,
+        required: true
         }
 
 },{ timestamps:true })

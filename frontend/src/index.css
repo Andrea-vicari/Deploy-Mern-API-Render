@@ -1,7 +1,20 @@
 
+.acid-text{
+  color: #adff2f !important;
+}
+
 .acid-green{
   background-color: greenyellow !important;
 }
+
+/* BACKGROUNDS */
+.bg-dj-console{
+  background-image: url(./assets/mixer-1284507_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 
 .text-blue-react{
   color: #00D8FF;
