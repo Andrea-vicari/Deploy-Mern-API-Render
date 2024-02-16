@@ -1,0 +1,36 @@
+[{
+    "_id": "65b28dcc8a2a8b2467bae1db",
+    "trackName": "SunFlowerLoop",
+    "trackUrl": "/tracks/sunflower-street-drumloop-85bpm-163900.mp3",
+    "createdAt": "2024-01-25T16:35:24.137Z",
+    "updatedAt": "2024-02-16T14:01:44.614Z",
+    "__v": 0,
+    "bpm": 100,
+    "genre": "DNB",
+    "mp3Name": "SunFlowerLoop",
+    "user_id": "demo"
+  },
+  {
+    "_id": "65b28d068a2a8b2467bae1d7",
+    "trackName": "QuestLoop",
+    "trackUrl": "/tracks/quest-luv-loop-4-170bpm-119701.mp3",
+    "createdAt": "2024-01-25T16:32:06.829Z",
+    "updatedAt": "2024-02-16T14:00:55.545Z",
+    "__v": 0,
+    "bpm": 170,
+    "genre": "DNB",
+    "mp3Name": "QuestLoop",
+    "user_id": "demo"
+  },
+  {
+    "_id": "65b0eae24b6cc065f7fb8b4a",
+    "trackName": "Heater3",
+    "trackUrl": "https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3",
+    "createdAt": "2024-01-24T10:48:02.135Z",
+    "updatedAt": "2024-02-16T14:04:37.882Z",
+    "__v": 0,
+    "bpm": 0,
+    "genre": "Drum",
+    "mp3Name": "Heater3",
+    "user_id": "demo"
+  }]
