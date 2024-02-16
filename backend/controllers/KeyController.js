@@ -13,9 +13,11 @@ const getSingleKey = async (req, res)=> {
 
         const { id } = req.params;
 
+        /*
         if (!mongoose.Types.ObjectId.isValid(id)){
             return res.status(404).json({error: "No Key found"})
         }
+        */
 
         const key = await Keys.find({"keyNumber":id});
 
