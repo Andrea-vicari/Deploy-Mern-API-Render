@@ -1,11 +1,27 @@
 const mongoose = require('mongoose')
 
 const tracksSchema = new mongoose.Schema({
-        trackName:{
+       user_id:{
         type: String,
         required: true
         },
+        keyNumber:{
+        type: Number,
+        required: true
+        },
         trackUrl:{
+        type: String,
+        required: true
+        },
+        mp3Name:{
+        type: String,
+        required: true
+        },
+        bpm:{
+        type: Number,
+        required: true
+        },
+        genre:{
         type: String,
         required: true
         }

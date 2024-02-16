@@ -28,10 +28,10 @@ const getSingleTrack = async (req, res)=> {
 // Create a NEW track:
 const createNewTrack = async (req, res)=> {
 
-    const {trackName, trackUrl} = req.body
+    const {user_id, keyNumber, trackUrl, mp3Name, bpm, genre} = req.body
 
     try{
-        const track = await Tracks.create({trackName, trackUrl})
+        const track = await Tracks.create({user_id, keyNumber, trackUrl, mp3Name, bpm, genre})
         res.status(200).json(track)
     }
 
@@ -61,7 +61,7 @@ const deleteTrack = async (req, res)=> {
 // Update a single track
 const updateTrack = async (req, res)=> {
 
-    const {trackName, trackUrl} = req.body
+    const {user_id, keyNumber, trackUrl, mp3Name, bpm, genre} = req.body
 
     const { id } = req.params;
 

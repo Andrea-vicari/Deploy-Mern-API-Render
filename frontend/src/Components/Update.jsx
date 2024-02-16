@@ -82,7 +82,7 @@ function Update (){
     return(
         <main className="container">
 
-                    <h1 className="h1 mb-3 text-white">Edit Key</h1>
+                    <h1 className="h1 mb-3 text-white">Edit:  <span className='acid-text'>Key {id}</span></h1>
                     <p className="text-white">Choose the Track for this key from a collection of more than 30 tracks</p>
           <div className="container-fluid d-flex flex-wrap px-0 justify-content-center">
                     {data.map((e)=>{
