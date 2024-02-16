@@ -13,10 +13,6 @@ const keySchema = new mongoose.Schema({
         type: String,
         required: true
         },
-        user:{
-        type: String,
-        required: true
-        },
         mp3Name:{
         type: String,
         required: true
