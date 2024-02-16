@@ -65,10 +65,11 @@ const updateTrack = async (req, res)=> {
 
     const { id } = req.params;
 
+    /*
     if (!mongoose.Types.ObjectId.isValid(id)){
         return res.status(404).json({error: "No Track found gg"})
     }
-
+    */
     const track = await Tracks.findByIdAndUpdate({_id: id},{
         ...req.body
     })
