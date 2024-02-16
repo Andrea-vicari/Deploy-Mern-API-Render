@@ -17,7 +17,7 @@ const getSingleKey = async (req, res)=> {
             return res.status(404).json({error: "No Key found"})
         }
 
-        const key = await Keys.findById(id);
+        const key = await Keys.find({"keyNumber":id});
 
         if(!key){
           return res.status(400).json({error: "No Key found"})

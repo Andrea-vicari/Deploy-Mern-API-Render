@@ -11,9 +11,7 @@ function Update (){
 
     const makeAPICall = async () => {
       try {
-        const response = await fetch('https://deploy-mern-api-render.vercel.app/api/tracks', {mode:'cors',headers:{
-          'Authorization' : `Bearer ${user.token}`
-        }});
+        const response = await fetch('https://deploy-mern-api-render.vercel.app/api/tracks', {mode:'cors'});
         const data = await response.json();
         setData(data)
         console.log({ data })
@@ -90,12 +88,17 @@ function Update (){
 
                           <div className="col-5 mb-2 mx-2" key={e._id}>
                           <div className="card">
-                              <h5 className="fs-6 card-header">{e.trackName}</h5>
+                              <h5 className="fs-6 card-header acid-green">{e.mp3Name}</h5>
                               <div className="card-body">
-                              <audio className="clip" id={e.trackName} src={e.trackUrl}></audio>
-                              <i className="fa fa-play  w-100 py-2 mb-2 mx-1" type="submit" onClick={()=>playMp3(e.trackName)}> Play</i>
-                              <i className="fa fa-pause  w-100 py-2 mb-2 mx-1" type="submit" onClick={()=>stopMp3(e.trackName)}> Pause</i>
-                              <i className="fa fa-save  w-100 py-2 mx-1" type="submit" onClick={()=>handleClick(e.trackUrl, e.mp3Name, e.bpm, e.genre)}> Use Track</i>
+                              <p>TYPE: {e.genre}</p>
+                              <p>BPM: {e.bpm}</p>
+                              <audio className="clip" id={e.trackUrl} src={e.trackUrl}></audio>
+                              <i className="fa fa-play  w-100 py-2 mb-2 mx-1" type="submit" onClick={()=>playMp3(e.trackUrl)}> Play</i>
+                              <i className="fa fa-pause  w-100 py-2 mb-2 mx-1" type="submit" onClick={()=>stopMp3(e.trackUrl)}> Pause</i>
+
+                              </div>
+                              <div className="card-footer">
+                              <i className="fa fa-save w-100 py-2 mx-1 fs-4" type="submit" onClick={()=>handleClick(e.trackUrl, e.mp3Name, e.bpm, e.genre)}><small> Save Track</small></i>
                               </div>
 
 
