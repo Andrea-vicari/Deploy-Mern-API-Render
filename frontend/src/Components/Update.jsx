@@ -44,7 +44,7 @@ function Update (){
 
 
 
-      const handleClick = async (trackUrl, trackName)=>{
+      const handleClick = async (trackUrl, mp3Name, bpm, genre)=>{
 
 
             if(!user){
@@ -55,7 +55,7 @@ function Update (){
             const user_id = user.user_id;
 
 
-            const key = {trackUrl, trackName, user_id};
+            const key = {trackUrl, mp3Name, bpm, genre};
 
             console.log(key)
 
@@ -95,7 +95,7 @@ function Update (){
                               <audio className="clip" id={e.trackName} src={e.trackUrl}></audio>
                               <i className="fa fa-play  w-100 py-2 mb-2 mx-1" type="submit" onClick={()=>playMp3(e.trackName)}> Play</i>
                               <i className="fa fa-pause  w-100 py-2 mb-2 mx-1" type="submit" onClick={()=>stopMp3(e.trackName)}> Pause</i>
-                              <i className="fa fa-save  w-100 py-2 mx-1" type="submit" onClick={()=>handleClick(e.trackUrl, e.trackName)}> Use Track</i>
+                              <i className="fa fa-save  w-100 py-2 mx-1" type="submit" onClick={()=>handleClick(e.trackUrl, e.mp3Name, e.bpm, e.genre)}> Use Track</i>
                               </div>
 
 

@@ -71,8 +71,10 @@ const updateKey = async (req, res)=> {
     if (!mongoose.Types.ObjectId.isValid(id)){
         return res.status(404).json({error: "No Key found"})
     }
+    // const workout = await Workouts.find({"user":id});
+    // const key = await Keys.findByIdAndUpdate({_id: id}
 
-    const key = await Keys.findByIdAndUpdate({_id: id},{
+    const key = await Keys.find({"keyNumber":id},{
         ...req.body
     })
 
