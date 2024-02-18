@@ -98,7 +98,7 @@ function Update (){
 
                               </div>
                               <div className="card-footer">
-                              <i className="fa fa-save w-100 py-2 mx-1 fs-4" type="submit" onClick={()=>handleClick(e.trackUrl, e.mp3Name, e.bpm, e.genre)}><small> Save Track</small></i>
+                              <i className="fa fa-save w-100 py-2 mx-1 fs-4" type="submit" onClick={()=>handleClick(e.keyNumber, e.trackUrl, e.mp3Name, e.bpm, e.genre)}><small> Save Track</small></i>
                               </div>
 
 

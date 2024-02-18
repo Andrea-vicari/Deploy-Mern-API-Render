@@ -31,6 +31,7 @@ const getSingleKey = async (req, res)=> {
 const createNewKey = async (req, res)=> {
 
     try{
+        // user_id, keyNumber, trackUrl, mp3Name, bpm, genre
         const {user_id, keyNumber, trackUrl, mp3Name, bpm, genre } = req.body
         const key = await Keys.create({user_id, keyNumber, trackUrl, mp3Name, bpm, genre})
         res.status(200).json(key)
