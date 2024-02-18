@@ -42,7 +42,7 @@ const createNewKey = async (req, res)=> {
 
 }
 
-// Delete a single track
+// Delete a single key
 const deleteKey = async (req, res)=> {
 
     const { id } = req.params;
@@ -59,7 +59,7 @@ const deleteKey = async (req, res)=> {
       res.status(200).json(key);
 }
 
-// Update a single track
+// Update a single key
 const updateKey = async (req, res)=> {
 
 
@@ -81,7 +81,7 @@ const updateKey = async (req, res)=> {
     })
 
     if(!key){
-        return res.status(400).json({error: "No Track found y"})
+        return res.status(400).json({error: "No key found y"})
     }
 
     res.status(200).json(key);

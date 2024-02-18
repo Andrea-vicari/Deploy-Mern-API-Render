@@ -40,7 +40,7 @@ function DashBoard (){
                     <div className="card">
                         <h5 className="card-header">KEY: {e.keyNumber}</h5>
                         <div className="card-body">
-                          <Link to={`/update/${e.keyNumber}`} className="btn btn-primary">Edit</Link>
+                          <Link to={`/update/${e.keyNumber}`} className="btn acid-green">Edit</Link>
                         </div>
                       </div>
 

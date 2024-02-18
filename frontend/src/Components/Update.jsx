@@ -42,7 +42,7 @@ function Update (){
 
 
 
-      const handleClick = async (trackUrl, mp3Name, bpm, genre)=>{
+      const handleClick = async (keyNumber, trackUrl, mp3Name, bpm, genre)=>{
 
 
             if(!user){
@@ -53,14 +53,14 @@ function Update (){
             const user_id = user.user_id;
 
 
-            const key = {trackUrl, mp3Name, bpm, genre};
+            const key = {user_id, keyNumber, trackUrl, mp3Name, bpm, genre};
 
             console.log(key)
 
 
-            const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys/${id}`,{
+            const response = await fetch(`https://deploy-mern-api-render.vercel.app/api/keys/`,{
               mode:"cors",
-              method : 'PATCH',
+              method : 'POST',
               body: JSON.stringify(key),
               headers:{
                 'Content-Type': 'application/json',

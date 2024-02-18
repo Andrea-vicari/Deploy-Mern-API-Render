@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { UseAuthContext } from "../hooks/UseAuthContext"
 
 
-function SingleKey (){
+function SingleKeyDemo (){
 
     const [data, setData] = useState([]);
     const {user} = UseAuthContext()
@@ -40,12 +40,12 @@ function SingleKey (){
     }
 
 
-    const playSound = (i, trackName, trackID, trackUrl) => {
+    const playSound = (i, mp3Name, trackID, trackUrl) => {
 
         document.getElementById(i+300).classList.remove("d-none");
         document.getElementById(i+200).classList.add("playing");
 
-       document.getElementById('MP3_display').innerHTML = `${trackName}`;
+       document.getElementById('MP3_display').innerHTML = `${mp3Name}`;
 
         console.log(i);
 
@@ -66,7 +66,7 @@ function SingleKey (){
     return(
         data.map((d, i) => (
             <div key={d.id} id={100+i}>
-                <button id={200+i} className="btn acid-green btn-sq-responsive" onClick={() => playSound(i, d.trackName, d.id, d.trackUrl)}>
+                <button id={200+i} className="btn acid-green btn-sq-responsive" onClick={() => playSound(i, d.mp3Name, d.id, d.trackUrl)}>
                 <span id={i+300} className="spinner-border d-none spinner-border-sm" aria-hidden="true"></span>
                 <audio className="clip" id={d.trackUrl} src={d.trackUrl}></audio>
                 </button>
@@ -75,4 +75,4 @@ function SingleKey (){
      )))
 }
 
-export default SingleKey
+export default SingleKeyDemo
