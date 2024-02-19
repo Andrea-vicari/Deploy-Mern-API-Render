@@ -1,7 +1,7 @@
 import React from "react";
-import mp3List from "./mp3.json";
+// import mp3List from "./mp3.json";
 import { useState, useEffect } from "react";
-import keyList from "./keyList.json";
+// import keyList from "./keyList.json";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { UseAuthContext } from "../hooks/UseAuthContext"
 
