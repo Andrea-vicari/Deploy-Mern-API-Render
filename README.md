@@ -5,8 +5,8 @@ Repo for Drum MAchine React Application.\
 Both FrontEnd and Back End deployed on Vercel platform.
 
  ### Demo
- 👉 Video Demo on <a href="https://youtu.be/Gjjc0ujPXWE?feature=shared" target="_blank" > YouTube</a>\
- 👉 Live Deployment <a href="https://fitness-center-client.vercel.app/" target="_blank" > VERCEL</a>
+ 👉 Video Demo on <a href="#" target="_blank" > YouTube</a>\
+ 👉 Live Deployment <a href="https://deploy-mern-api-render-frontend.vercel.app/" target="_blank" > VERCEL</a>
 
 ## Features
 * MERN Full Stack Project
