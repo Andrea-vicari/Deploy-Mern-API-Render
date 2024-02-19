@@ -28,8 +28,8 @@ function Header () {
 
                     <div className="offcanvas offcanvas-top offcanvas-dark bg-black pb-4" data-bs-scroll="true" tabIndex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
                       <div className="offcanvas-header">
-                        <img src={reactlogogreen}  width="50"></img>
-                        <h3 className="offcanvas-title text-white" id="offcanvasWithBothOptionsLabel">React Drum Machine</h3>
+                        <img src={reactlogogreen}  width="30"></img>
+                        <h5 className="offcanvas-title text-white" id="offcanvasWithBothOptionsLabel">React Drum Machine</h5>
                         <i type="button" className="fa fa-times btn-close acid-text" data-bs-dismiss="offcanvas" aria-label="Close"></i>
                       </div>
                       <div className="offcanvas-body">
