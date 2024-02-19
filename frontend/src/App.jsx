@@ -8,7 +8,6 @@ import Update from './Components/Update';
 import DashBoard from './Components/DashBoard';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
-import CreateKey from './Components/CreateKey';
 import "../src/index.css";
 
 import { UseAuthContext } from "./hooks/UseAuthContext"
@@ -32,7 +31,6 @@ function App() {
               <Route path='/update/:id' element={<Update />}></Route>
               <Route path='/login' element={<Login/>}></Route>
               <Route path='/signup' element={<Signup />}></Route>
-              <Route path='/createkey' element={<CreateKey />}></Route>
               <Route path='/keyboarduser' element={<KeyboardUser />}></Route>
             </Routes>
       <Footer />
