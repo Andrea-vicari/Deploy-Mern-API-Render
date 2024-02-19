@@ -19,11 +19,11 @@ function Header () {
     return(
         <div className="container">
             <div className="row p-2 pb-3">
-              <div className="col-4">
+              <div className="col-3">
               <UserIcon />
               </div>
               <Display />
-              <div className="col-4 text-white fs-3 d-flex justify-content-end align-items-center">
+              <div className="col-3 text-white fs-3 d-flex justify-content-end align-items-center">
               <i className="fa fa-bars acid-text" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark"></i>
 
                     <div className="offcanvas offcanvas-top offcanvas-dark bg-black pb-4" data-bs-scroll="true" tabIndex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
