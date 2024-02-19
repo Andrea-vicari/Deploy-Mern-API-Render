@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { UseAuthContext } from "../hooks/UseAuthContext"
+import { Navigate } from "react-router-dom";
 
 export const useLogin = () =>{
 
@@ -22,6 +23,10 @@ export const useLogin = () =>{
 
         })
 
+        function gotoDash(){
+            <Navigate to="/dashboard"></Navigate>
+        }
+
         const json = await response.json();
 
         if(!response.ok){
@@ -38,6 +43,10 @@ export const useLogin = () =>{
             dispatch({type: 'LOGIN', payload: json})
 
             setisLoading(false)
+
+            gotoDash()
+
+
         }
 
     }
