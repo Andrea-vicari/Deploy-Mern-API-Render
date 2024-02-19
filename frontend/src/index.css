@@ -64,8 +64,8 @@ background-color: blueviolet !important;
   /* Style for Small Screen */
   @media (max-width:575px) {
   .btn-sq-responsive {
-  width: 110px !important; /* whatever width you want for mobile screen */
-  height: 110px !important; /* whatever height you want for mobile screen */
+  width: 115px !important; /* whatever width you want for mobile screen */
+  height: 115px !important; /* whatever height you want for mobile screen */
   max-width: 100% !important;
   max-height: 100% !important;
   font-size:5px;
@@ -78,8 +78,8 @@ background-color: blueviolet !important;
     /* Style for Small Screen */
     @media (max-width:360px) {
       .btn-sq-responsive {
-      width: 100px !important; /* whatever width you want for mobile screen */
-      height: 100px !important; /* whatever height you want for mobile screen */
+      width: 107px !important; /* whatever width you want for mobile screen */
+      height: 107px !important; /* whatever height you want for mobile screen */
       max-width: 100% !important;
       max-height: 100% !important;
       font-size:5px;
@@ -92,8 +92,8 @@ background-color: blueviolet !important;
   /* Style for Small Screen */
   @media (max-width:320px) {
     .btn-sq-responsive {
-    width: 85px !important; /* whatever width you want for mobile screen */
-    height: 85px !important; /* whatever height you want for mobile screen */
+    width: 93px !important; /* whatever width you want for mobile screen */
+    height: 93px !important; /* whatever height you want for mobile screen */
     max-width: 100% !important;
     max-height: 100% !important;
     font-size:5px;

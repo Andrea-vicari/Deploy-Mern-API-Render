@@ -15,7 +15,7 @@ function Login() {
     }
 
   return (
-    <div className="bg-dj-console d-flex justify-content-center align-items-center pt-5 pb-5">
+    <div className="bg-dj-console d-flex justify-content-center align-items-center vh-100">
       <div className="bg-black p-3 rounded w-75 text-white">
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>

@@ -12,6 +12,7 @@ import CreateKey from './Components/CreateKey';
 import "../src/index.css";
 
 import { UseAuthContext } from "./hooks/UseAuthContext"
+import KeyboardUser from './Components/KeyboardUser';
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
               <Route path='/login' element={<Login/>}></Route>
               <Route path='/signup' element={<Signup />}></Route>
               <Route path='/createkey' element={<CreateKey />}></Route>
-
+              <Route path='/keyboarduser' element={<KeyboardUser />}></Route>
             </Routes>
       <Footer />
     </React.Fragment>

@@ -28,13 +28,23 @@ function DashBoard (){
       makeAPICall();
     }, [])
 
+    let filterKey = [];
+    let terVar = false
+
+    data.forEach(element => {
+      element.user_id == "demo" ? filterKey.push(element) : terVar = true
+      return filterKey
+    });
+
+    console.log(filterKey)
+
 
     return(
       <div className="container mx-auto px-3 py-3 bg-black">
           <h3 className="text-white text-center">Dashboard</h3>
           <p className="text-secondary text-center">Click Edit to change the Track</p>
           <div className="row mb-3 text-center">
-          {data.map((e)=>{
+          {filterKey.map((e)=>{
                   return (
                     <div className="col-4 mb-2" key={e.keyNumber}>
                     <div className="card">

@@ -17,8 +17,8 @@ function Signup() {
     }
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-      <div className="bg-white p-3 rounded w-75">
+    <div className="bg-dj-console d-flex justify-content-center align-items-center vh-100">
+    <div className="bg-black p-3 rounded w-75 text-white">
         <h2>Register</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -48,7 +48,7 @@ function Signup() {
               value={password}
             />
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0" disabled={isLoading}>
+          <button type="submit" className="btn acid-green w-100 rounded-0" disabled={isLoading}>
             Sign Up
           </button>
           {error && <div className="error text-danger fs-4 mt-3">{error}</div>}

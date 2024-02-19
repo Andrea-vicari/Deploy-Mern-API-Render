@@ -26,7 +26,7 @@ function Header () {
               <div className="col-4 text-white fs-3 d-flex justify-content-end align-items-center">
               <i className="fa fa-bars acid-text" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark"></i>
 
-                    <div className="offcanvas offcanvas-top offcanvas-dark bg-black" data-bs-scroll="true" tabIndex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
+                    <div className="offcanvas offcanvas-top offcanvas-dark bg-black pb-4" data-bs-scroll="true" tabIndex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
                       <div className="offcanvas-header">
                         <img src={reactlogogreen}  width="50"></img>
                         <h3 className="offcanvas-title text-white" id="offcanvasWithBothOptionsLabel">React Drum Machine</h3>
@@ -50,12 +50,18 @@ function Header () {
 
 
                             {user && (
-                               <div className="mt-3">
+                                <React.Fragment>
+                                <li className="text-white fs-5">
+                                 <Link to="/keyboarduser" className="acid-text nav-item text-decoration-none">
+                                  KeyboardUser
+                                  </Link>
+                                </li>
                               <li className="text-white fs-5">
                                 <i className="fa fa-user mx-2"></i>
                                 {user.email}</li>
                                 <li className="text-white fs-5" onClick={handleLogout}>Logout</li>
-                            </div>
+                                </React.Fragment>
+
                             )
                             }
 

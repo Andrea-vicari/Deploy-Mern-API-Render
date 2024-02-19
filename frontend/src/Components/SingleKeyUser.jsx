@@ -3,14 +3,16 @@ import { useState, useEffect } from "react";
 import { UseAuthContext } from "../hooks/UseAuthContext"
 
 
-function SingleKeyDemo (){
+function SingleKeyUser (){
 
     const [data, setData] = useState([]);
     const {user} = UseAuthContext()
 
     const makeAPICall = async () => {
         try {
-          const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys/', {mode:'cors'});
+          const response = await fetch('https://deploy-mern-api-render.vercel.app/api/keys/', {mode:'cors', headers:{
+            'Authorization' : `Bearer ${user.token}`
+          }});
           const data = await response.json();
           setData(data)
 
@@ -21,9 +23,9 @@ function SingleKeyDemo (){
         }
       }
       useEffect(() => {
-
+        if(user){
            makeAPICall();
-
+        }
 
       }, [user])
 
@@ -31,7 +33,7 @@ function SingleKeyDemo (){
       let terVar = false
 
       data.forEach(element => {
-        element.user_id == "demo" ? filterKey.push(element) : terVar = true
+        element.user_id == user.user_id  ? filterKey.push(element) : terVar = true
         return filterKey
       });
 
@@ -72,7 +74,7 @@ function SingleKeyDemo (){
 
 
     return(
-        filterKey.map((d, i) => (
+      filterKey.map((d, i) => (
             <div key={d.id} id={100+i}>
                 <button id={200+i} className="btn acid-green btn-sq-responsive" onClick={() => playSound(i, d.mp3Name, d.id, d.trackUrl)}>
                 <span id={i+300} className="spinner-border d-none spinner-border-sm" aria-hidden="true"></span>
@@ -83,4 +85,4 @@ function SingleKeyDemo (){
      )))
 }
 
-export default SingleKeyDemo
+export default SingleKeyUser
