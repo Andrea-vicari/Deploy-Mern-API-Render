@@ -1,5 +1,5 @@
 ## DrumPad FULL STACK Application
-<img src="https://github.com/Andrea-vicari/Fitness-Center/blob/master/Fitness_Porfolio_cover.jpg" width="800px">\
+<img src="https://github.com/Andrea-vicari/DrumMachine-MERN/blob/master/DrumMachine_GITHub_cover.jpg" width="800px">\
 Repo for Drum MAchine React Application.\
 **Full STACK** application built with Node, Express, MongoDB and React.\
 Both FrontEnd and Back End deployed on Vercel platform.
@@ -12,7 +12,7 @@ Both FrontEnd and Back End deployed on Vercel platform.
 * MERN Full Stack Project
 * Users registration made with BCrypt and JWT web Token
 * Server built with Node.js and Express.js, Mongoose and MongoDB as database
-* After login
+* User can CUSTOMIZE its own keyboard choosin' between a list of MP3
 * Trainers can see all users, insert workouts and approve workouts
 * Users can check its workout and register the date of the execution
 * Users can check its past workouts approved by the trainer
