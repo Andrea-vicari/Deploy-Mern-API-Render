@@ -1,10 +1,16 @@
 import React from 'react'
+import { UseAuthContext } from "../hooks/UseAuthContext";
+import { Link } from 'react-router-dom';
 
 function UserIcon() {
+
+  const {user} = UseAuthContext()
+
   return (
-    <React.Fragment>
-        <i className='fa fa-user fs-1 acid-text'></i>
-    </React.Fragment>
+
+    <Link to="/login">
+        <i className='fa fa-user-circle fs-1 acid-text'></i>
+    </Link>
   )
 }
 

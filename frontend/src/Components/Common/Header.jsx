@@ -4,8 +4,8 @@ import { Display } from "../Display";
 import UserIcon from "../UserIcon";
 import { UseAuthContext } from "../../hooks/UseAuthContext";
 import reactlogogreen from "../Common/react_green.svg";
-
 import { useLogout } from "../../hooks/useLogout";
+
 function Header () {
 
     const { logout } = useLogout()
