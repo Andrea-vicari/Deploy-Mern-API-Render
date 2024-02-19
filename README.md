@@ -1,6 +1,6 @@
 ## DrumPad FULL STACK Application
 <img src="https://github.com/Andrea-vicari/DrumMachine-MERN/blob/master/DrumMachine_GITHub_cover.jpg" width="800px">\
-Repo for Drum MAchine React Application.\
+Repo for DrumPad React Application.\
 **Full STACK** application built with Node, Express, MongoDB and React.\
 Both FrontEnd and Back End deployed on Vercel platform.
 
@@ -12,8 +12,9 @@ Both FrontEnd and Back End deployed on Vercel platform.
 * MERN Full Stack Project
 * Users registration made with BCrypt and JWT web Token
 * Server built with Node.js and Express.js, Mongoose and MongoDB as database
-* A demo DrumPad is present with 15 keys with sounds
-* User can CUSTOMIZE its own keyboard choosin' between a list of 30 tracks for each key
+* A test/demo DrumPad is present with 15 keys with sounds
+* Private Dashboard for logged user to customize its own keyboard
+* User can CUSTOMIZE its own keyboard choosin' between a list more than 30 tracks for each key
 * Each Track shows BPM and genre in order to create a full customized keyboard
 
 ## Technologies
