@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { UseAuthContext } from "../hooks/UseAuthContext"
-import { Navigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export const useLogin = () =>{
 
     const [error, setError] = useState(null)
     const [isLoading, setisLoading] = useState(null)
     const { user, dispatch } = UseAuthContext()
+
+    const navigate = useNavigate()
 
       const login = async (email, password) => {
         setisLoading(true)
@@ -24,7 +26,7 @@ export const useLogin = () =>{
         })
 
         function gotoDash(){
-            <Navigate to="/dashboard"></Navigate>
+            navigate('/dashboard')
         }
 
         const json = await response.json();
