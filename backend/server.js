@@ -16,7 +16,7 @@ app.use((req,res, next)=>{
 /* USE THIS FOR DEPLOYMENT: https://deploy-mern-api-render-frontend.vercel.app/ */
 app.use(cors(
     {
-        origin: ["http://localhost:5173"],
+        origin: ["https://deploy-mern-api-render-frontend.vercel.app"],
         methods: ["POST", "GET", "PUT", "PATCH"],
         credentials: true
     }
