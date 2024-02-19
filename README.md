@@ -1,33 +1,37 @@
-# DRUMPAD deployed on VERCEL
-Installation of MERN application live on vercel, both Back and FrontEnd
-(🔥 Remember to re add the front-end vercel path!!)
+## DrumPad FULL STACK Application
+<img src="https://github.com/Andrea-vicari/Fitness-Center/blob/master/Fitness_Porfolio_cover.jpg" width="800px">\
+Repo for DrumPad Center React Application.\
+**Full STACK** application built with Node, Express, MongoDB and React.\
+Both FrontEnd and Back End deployed on Vercel platform.
 
+ ### Demo
+ 👉 Video Demo on <a href="https://youtu.be/Gjjc0ujPXWE?feature=shared" target="_blank" > YouTube</a>\
+ 👉 Live Deployment <a href="https://fitness-center-client.vercel.app/" target="_blank" > VERCEL</a>
 
-## 🔥 [RECAP 31 JAN]
-===================
-#### BackEnd folder
-* Connection with  LIVE MongoDB => OK
-* / Controllers: Key, Track, User
-* / Models: Key(with userId parameter), Track, User
-* / Keys: Key(disabled middleware), tracks, users
-* Server.js
+## Features
+* MERN Full Stack Project
+* Users registration made with BCrypt and JWT web Token
+* Server built with Node.js and Express.js, Mongoose and MongoDB as database
+* A ristricted list of users have the "TRAINER" role
+* Trainers can see all users, insert workouts and approve workouts
+* Users can check its workout and register the date of the execution
+* Users can check its past workouts approved by the trainer
 
-## 💡 TODO
-===================
-#### Front-end folder
-* Test the user register and login:
-    * New User, New User With Mail already and weak password => OK
-    * Login: Ok both users
-* Style errors
-* Add a CreateKey form
-
-
-
-
-### Technologies
+## Technologies
 * Node.js
 * Express
-* Cors
-* Mongoose
 * MongoDB
 * React
+* Bootstrap5
+
+## NodeJS Packages
+* bcryptjs
+* cors
+* dotenv
+* mongoose
+* nodemon
+* cors
+* express
+* jsonwebtoken
+* validator
+
