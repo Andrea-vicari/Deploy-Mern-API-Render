@@ -21,12 +21,17 @@ export const useSignup = () =>{
 
         })
 
+        function gotoDash(){
+            navigate('/dashboard')
+        }
+
         const json = await response.json();
 
         if(!response.ok){
             setisLoading(false)
             setError(json.error)
             alert("NOT OK")
+            gotoDash()
         }
 
         if(response.ok){
