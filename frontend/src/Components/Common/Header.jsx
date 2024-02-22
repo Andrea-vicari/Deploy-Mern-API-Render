@@ -30,7 +30,7 @@ function Header () {
               <div className="col-3 text-white fs-3 d-flex justify-content-end align-items-center">
               <i className="fa fa-bars acid-text" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark"></i>
 
-                    <div className="offcanvas offcanvas-end offcanvas-dark bg-black pb-4" data-bs-scroll="true" tabIndex="-1" id="offcanvasDark" aria-controls="offcanvasWithBothOptions" aria-labelledby="offcanvasDarkLabel">
+                    <div className="offcanvas offcanvas-top offcanvas-dark bg-black pb-4" data-bs-scroll="true" tabIndex="-1" id="offcanvasDark" aria-controls="offcanvasWithBothOptions" aria-labelledby="offcanvasDarkLabel">
                       <div className="offcanvas-header">
                         <img src={reactlogogreen}  width="30"></img>
                         <h5 className="offcanvas-title text-white" id="offcanvasWithBothOptionsLabel">React Drum Machine</h5>
