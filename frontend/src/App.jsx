@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Navbar from "./Components/Common/Navbar"
+// import Navbar from "./Components/Common/Navbar"
 import Header from "./Components/Common/Header"
 import Footer from "./Components/Common/Footer"
 import Home from './Components/Home';
@@ -20,7 +20,7 @@ function App() {
   return (
     <React.Fragment>
 
-      <Navbar />
+      <Header />
 
 
           <Routes>
