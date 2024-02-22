@@ -16,6 +16,10 @@ function Header () {
       logout()
     }
 
+    function closeMenu(){
+      document.getElementById('offcanvasDark').classList.remove('show')
+    }
+
     return(
         <div className="container">
             <div className="row p-2 pb-3">
@@ -36,13 +40,13 @@ function Header () {
                       <div className="list">
                         <ul className="list-unstyled nav-pills">
                           <li>
-                          <Link to="/" className="acid-text nav-item text-decoration-none">
+                          <Link to="/" className="acid-text nav-item text-decoration-none" onClick={()=>closeMenu()}>
                             <i className="fa fs-6 fa fa-keyboard mx-2 text-white"></i>
                             DrumPad
                             </Link>
                           </li>
                           <li>
-                             <Link to="/dashboard" className="acid-text nav-item text-decoration-none">
+                             <Link to="/dashboard" className="acid-text nav-item text-decoration-none" onClick={()=>closeMenu()}>
                               <i className="fa fs-6 fa-calculator mx-2 text-white"></i>
                             Dashboard
                             </Link>
