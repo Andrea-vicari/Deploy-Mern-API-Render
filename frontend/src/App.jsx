@@ -29,7 +29,7 @@ function App() {
               <Route path="/register" element={<Signup />}></Route>
               <Route path="/dashboard" element={user ? <DashBoard />: <Navigate to="/login"/>} />
               <Route path='/update/:id' element={<Update />}></Route>
-              <Route path='/login' element={user ? <DashBoard />: <Navigate to="/login"/>}></Route>
+              <Route path='/login' element={user ? <DashBoard />: <Login />}></Route>
               <Route path='/signup' element={<Signup />}></Route>
               <Route path='/keyboarduser' element={<KeyboardUser />}></Route>
             </Routes>
