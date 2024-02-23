@@ -19,28 +19,26 @@ function Navbar () {
 
     return(
         <div className="container">
-            <nav className="navbar navbar-dark bg-black" aria-label="DrumPadmenu">
+            <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
                 <div className="container-fluid">
-
-                <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                    <a className="navbar-brand" href="#">{reactlogogreen}r</a>
+                    <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="navbar-collapse collapse" id="navbarsExample01">
-                    <ul className="navbar-nav me-auto mb-2">
-                    <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">DashBoard</a>
-                    </li>
-                    <li className="nav-item">
+                    </button>
+                    <div className="navbar-collapse collapse" id="navbarCollapse">
+                    <ul className="navbar-nav me-auto mb-2 mb-md-0">
+                        <li className="nav-item">
+                        <a className="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li className="nav-item">
                         <a className="nav-link" href="#">Link</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-
+                        </li>
+                        <li className="nav-item">
+                        <a className="nav-link" aria-disabled="true">Disabled</a>
+                        </li>
                     </ul>
 
-                </div>
+                    </div>
                 </div>
             </nav>
         </div>
