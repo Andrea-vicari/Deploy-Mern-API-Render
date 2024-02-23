@@ -5,8 +5,13 @@ Repo for DrumPad React Application.\
 Both FrontEnd and Back End deployed on Vercel platform.
 
  ### Demo
- 👉 Video Demo on <a href="#" target="_blank" > YouTube</a>\
- 👉 Live Deployment <a href="https://deploy-mern-api-render-frontend.vercel.app/" target="_blank" > VERCEL</a>
+ 👉👉 Video Demo on <a href="https://youtu.be/GFsf-X2ULvo" target="_blank" > YouTube</a>\
+ 👉👉 Live Deployment <a href="https://deploy-mern-api-render-frontend.vercel.app/" target="_blank" > VERCEL</a>
+
+### User-Test
+Use below credentials to log-in and try\
+👉 utentedemo@drumpad.it\
+👉 D3moUser!
 
 ## Features
 * MERN Full Stack Project
