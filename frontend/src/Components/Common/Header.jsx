@@ -42,7 +42,7 @@ function Header () {
                           <li>
                           <Link to="/" className="acid-text nav-item text-decoration-none" onClick={()=>closeMenu()}>
                             <i className="fa fs-6 fa fa-keyboard mx-2 text-white"></i>
-                            DrumPad
+                            Demo DrumPad
                             </Link>
                           </li>
                           <li>
@@ -57,7 +57,7 @@ function Header () {
                                 <React.Fragment>
                                 <li className="text-white fs-5 mt-3">
                                  <Link to="/homeuser" className="acid-text nav-item text-decoration-none">
-                                 <i className="fa fs-6 fa-heart mx-2 text-white"></i>
+                                 <i className="fa fs-6 fa-heart mx-2 text-danger"></i>
                                   Custom DrumPAD
                                   </Link>
                                 </li>
