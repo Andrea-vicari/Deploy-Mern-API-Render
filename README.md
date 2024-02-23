@@ -26,6 +26,7 @@ Use below credentials to log-in and try\
 * Node.js
 * Express
 * MongoDB
+* Postman
 * React
 * Bootstrap5
 
