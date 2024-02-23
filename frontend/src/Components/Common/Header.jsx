@@ -55,7 +55,7 @@ function Header () {
 
                             {user && (
                                 <React.Fragment>
-                                <li className="text-white fs-5">
+                                <li className="text-white fs-5 mt-3">
                                  <Link to="/keyboarduser" className="acid-text nav-item text-decoration-none">
                                  <i className="fa fs-6 fa-heart mx-2 text-white"></i>
                                   Custom DrumPAD
