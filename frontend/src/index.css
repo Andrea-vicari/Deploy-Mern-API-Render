@@ -29,10 +29,11 @@ background-color: blueviolet !important;
 }
 
 /* IMPORTANTE: #contenitore-keyboard serve per dare un margine top al fine
-di distanziare dalla fixed nabar in alto */
+di distanziare dalla fixed nabar in alto
 #contenitore-keyboard{
   margin-top:70px;
 }
+*/
 
 /* Style for Extra Large Screen */
 @media (max-width:3920px) {
