@@ -57,7 +57,8 @@ function Header () {
                                 <React.Fragment>
                                 <li className="text-white fs-5">
                                  <Link to="/keyboarduser" className="acid-text nav-item text-decoration-none">
-                                  KeyboardUser
+                                 <i className="fa fs-6 fa-heart mx-2 text-white"></i>
+                                  Custom DrumPAD
                                   </Link>
                                 </li>
                               <li className="text-white fs-5">
