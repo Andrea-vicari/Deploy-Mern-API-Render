@@ -28,7 +28,11 @@
 background-color: blueviolet !important;
 }
 
-/* IMPORTANTE: */
+/* IMPORTANTE: #contenitore-keyboard serve per dare un margine top al fine
+di distanziare dalla fixed nabar in alto */
+#contenitore-keyboard{
+  margin-top:70px;
+}
 
 /* Style for Extra Large Screen */
 @media (max-width:3920px) {
@@ -93,6 +97,7 @@ background-color: blueviolet !important;
       }
   /* Style for Small Screen */
   @media (max-width:320px) {
+
     .btn-sq-responsive {
     width: 93px !important; /* whatever width you want for mobile screen */
     height: 93px !important; /* whatever height you want for mobile screen */
