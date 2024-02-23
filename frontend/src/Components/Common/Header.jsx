@@ -64,7 +64,9 @@ function Header () {
                               <li className="text-white fs-5">
                                 <i className="fa fa-user mx-2"></i>
                                 {user.email}</li>
-                                <li className="text-white fs-5" onClick={handleLogout}>Logout</li>
+                                <li className="text-white fs-5" onClick={handleLogout}>
+                                  <i className="fa fa-toggle-off fs-6 mx-2 text-white"></i>
+                                  Logout</li>
                                 </React.Fragment>
 
                             )
