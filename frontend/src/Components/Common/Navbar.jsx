@@ -29,7 +29,7 @@ function Navbar () {
                 <div className="navbar-collapse collapse" id="navbarsExample01">
                     <ul className="navbar-nav me-auto mb-2">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">Home</a>
+                        <a className="nav-link active" aria-current="page" href="#">DashBoard</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">Link</a>
@@ -37,18 +37,9 @@ function Navbar () {
                     <li className="nav-item">
                         <a className="nav-link disabled" aria-disabled="true">Disabled</a>
                     </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                        <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">Action</a></li>
-                        <li><a className="dropdown-item" href="#">Another action</a></li>
-                        <li><a className="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
+
                     </ul>
-                    <form role="search">
-                    <input className="form-control" type="search" placeholder="Search" aria-label="Search"/>
-                    </form>
+
                 </div>
                 </div>
             </nav>
