@@ -28,6 +28,8 @@
 background-color: blueviolet !important;
 }
 
+/* IMPORTANTE: */
+
 /* Style for Extra Large Screen */
 @media (max-width:3920px) {
   .btn-sq-responsive {

@@ -53,7 +53,7 @@ function SingleKeyDemo (){
         document.getElementById(i+300).classList.remove("d-none");
         document.getElementById(i+200).classList.add("playing");
 
-       document.getElementById('MP3_display').innerHTML = `${mp3Name}`;
+       //document.getElementById('MP3_display').innerHTML = `${mp3Name}`;
 
         console.log(i);
 
