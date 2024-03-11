@@ -30,14 +30,15 @@ function SingleKeyUser (){
       }, [user])
 
       let filterKey = [];
-      let terVar = false
+      let terVar = false;
+      let shortedKey = [];
 
       data.forEach(element => {
         element.user_id == user.user_id  ? filterKey.push(element) : terVar = true
         return filterKey
       });
 
-      console.log(filterKey)
+      filterKey.length = 15;
 
 
 
